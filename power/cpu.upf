@@ -1,0 +1,9 @@
+# Power intent for the optional rv32i_power_shell experiment.
+create_power_domain PD_TOP -elements {.}
+create_power_domain PD_CPU -elements {u_core}
+create_logic_port isolate -direction in
+create_logic_port power_good -direction in
+set_isolation CPU_OUTPUTS -domain PD_CPU -applies_to outputs \
+  -clamp_value 0 -isolation_signal isolate -isolation_sense high -location parent
+# No retention: reset is required before removing output isolation on restart.
+# Supply network and power-switch mapping are platform-specific and not provided.
