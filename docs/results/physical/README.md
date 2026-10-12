@@ -2,6 +2,8 @@
 
 [Run 38275281036](https://github.com/gowthamaruthi/rv32i-single-cycle/actions/runs/38275281036), source `bd9c994`, completed both layouts. The **baseline job passes** the timing, electrical and KLayout DRC acceptance checks. The area-oriented candidate fails one hold check and is not the selected implementation. The run as a whole is therefore marked failed; the individual job results and summaries distinguish the two.
 
+The selected baseline was reproduced successfully in [run 38277622406](https://github.com/gowthamaruthi/rv32i-single-cycle/actions/runs/38277622406), source `41ae955`. Setup slack, hold slack, cell area and estimated power match the baseline values below; KLayout again reports zero markers and the acceptance summary has no errors. LVS remains unsupported.
+
 | Configuration | Cell area (um²) | Setup slack (ns) | Hold slack (ns) | Vectorless estimated power (mW) | KLayout DRC markers | Decision |
 |---|---:|---:|---:|---:|---:|---|
 | Baseline | 22495.4 | 3.10515 | 0.00643952 | 2.67727 | 0 | Selected |
