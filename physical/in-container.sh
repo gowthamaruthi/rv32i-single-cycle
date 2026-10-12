@@ -6,3 +6,5 @@ cd /OpenROAD-flow-scripts/flow
 mkdir -p /workspace/build/physical
 { openroad -version; yosys -V; klayout -v; } > "/workspace/build/physical/versions-$variant.txt"
 make DESIGN_CONFIG=/workspace/physical/config.mk WORK_HOME=/workspace/build/physical FLOW_VARIANT="$variant" > "/workspace/build/physical/run-$variant.log" 2>&1
+make DESIGN_CONFIG=/workspace/physical/config.mk WORK_HOME=/workspace/build/physical FLOW_VARIANT="$variant" drc lvs > "/workspace/build/physical/checks-$variant.log" 2>&1
+python3 /workspace/physical/check-results.py "$variant"

@@ -11,3 +11,6 @@ export NUM_CORES = 2
 export SYNTH_REPEATABLE_BUILD = 1
 # Both variants use identical RTL, clocks, I/O constraints and floorplan settings.
 export ABC_AREA = $(if $(filter area,$(FLOW_VARIANT)),1,0)
+
+# Guardband capacitance repair against routed parasitic growth.
+export CAP_MARGIN = 15
