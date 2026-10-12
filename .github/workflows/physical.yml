@@ -1,0 +1,25 @@
+name: Physical implementation
+on:
+  push:
+    paths: ['rtl/**', 'physical/**', '.github/workflows/physical.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  implement:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: [baseline, area]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run pinned OpenROAD flow
+        run: bash physical/run.sh '${{ matrix.variant }}'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: physical-${{ matrix.variant }}
+          path: build/physical/
+          retention-days: 14
