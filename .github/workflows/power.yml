@@ -1,7 +1,7 @@
 name: Power intent and isolation tests
 on:
   push:
-    paths: ['rtl/**', 'power/**', 'physical/image.txt', '.github/workflows/power.yml']
+    paths: ['rtl/**', 'power/**', '!power/*.md', 'physical/image.txt', '.github/workflows/power.yml']
   workflow_dispatch:
 permissions:
   contents: read

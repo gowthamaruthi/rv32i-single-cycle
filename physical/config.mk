@@ -14,3 +14,4 @@ export ABC_AREA = $(if $(filter area,$(FLOW_VARIANT)),1,0)
 
 # Guardband capacitance repair against routed parasitic growth.
 export CAP_MARGIN = 15
+export POST_CTS_TCL = /workspace/physical/short-wires.tcl
