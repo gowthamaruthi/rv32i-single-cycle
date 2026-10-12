@@ -1,0 +1,1852 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.66 (git sha1 7f8fdfd8d7bc08c749a2a969388d3425d4f369d5, clang++ 21.0.0 -fPIC -O3)
+
+-- Running command `read_verilog -sv rtl/rv32i_core.sv; hierarchy -check -top rv32i_core; synth -top rv32i_core; check -assert; stat; write_json build/synthesis.json' --
+
+1. Executing Verilog-2005 frontend: rtl/rv32i_core.sv
+Parsing SystemVerilog input from `rtl/rv32i_core.sv' to AST representation.
+Generating RTLIL representation for module `\rv32i_core'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \rv32i_core
+
+2.2. Analyzing design hierarchy..
+Top module:  \rv32i_core
+Removed 0 unused modules.
+
+3. Executing SYNTH pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1.1. Analyzing design hierarchy..
+Top module:  \rv32i_core
+
+3.1.2. Analyzing design hierarchy..
+Top module:  \rv32i_core
+Removed 0 unused modules.
+
+3.2. Executing PROC pass (convert processes to netlists).
+
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 4 switch rules as full_case in process $proc$rtl/rv32i_core.sv:134$127 in module rv32i_core.
+Removed 2 dead cases from process $proc$rtl/rv32i_core.sv:39$55 in module rv32i_core.
+Marked 21 switch rules as full_case in process $proc$rtl/rv32i_core.sv:39$55 in module rv32i_core.
+Removed a total of 2 dead cases.
+
+3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 46 assignments to connections.
+
+3.2.4. Executing PROC_INIT pass (extract init attributes).
+
+3.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~25 debug messages>
+
+3.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+     1/54: $4$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$209
+     2/54: $4$memwr$\regs$rtl/rv32i_core.sv:144$34_DATA[31:0]$208
+     3/54: $4$memwr$\regs$rtl/rv32i_core.sv:144$34_ADDR[4:0]$207
+     4/54: $3$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$204
+     5/54: $3$memwr$\regs$rtl/rv32i_core.sv:144$34_DATA[31:0]$203
+     6/54: $3$memwr$\regs$rtl/rv32i_core.sv:144$34_ADDR[4:0]$202
+     7/54: $2$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$201
+     8/54: $2$memwr$\regs$rtl/rv32i_core.sv:144$34_DATA[31:0]$200
+     9/54: $2$memwr$\regs$rtl/rv32i_core.sv:144$34_ADDR[4:0]$199
+    10/54: $1\index[31:0]
+    11/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$194
+    12/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$193
+    13/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$192
+    14/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$191
+    15/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$190
+    16/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$189
+    17/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$188
+    18/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$187
+    19/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$186
+    20/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$185
+    21/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$184
+    22/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$183
+    23/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$182
+    24/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$181
+    25/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$180
+    26/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$179
+    27/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$178
+    28/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$177
+    29/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$176
+    30/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$175
+    31/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$174
+    32/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$173
+    33/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$172
+    34/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$171
+    35/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$170
+    36/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$169
+    37/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$168
+    38/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$167
+    39/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$166
+    40/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$165
+    41/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$164
+    42/54: $1$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$163
+    43/54: $1$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$197
+    44/54: $1$memwr$\regs$rtl/rv32i_core.sv:144$34_DATA[31:0]$196
+    45/54: $1$memwr$\regs$rtl/rv32i_core.sv:144$34_ADDR[4:0]$195
+    46/54: $0\retire_valid[0:0]
+    47/54: $0\pc[31:0]
+    48/54: $0\retire_rd[4:0]
+    49/54: $0\retire_data[31:0]
+    50/54: $0\retire_insn[31:0]
+    51/54: $0\retire_pc[31:0]
+    52/54: $0\trap_pc[31:0]
+    53/54: $0\trap_cause[3:0]
+    54/54: $0\trapped[0:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.sv:39$55'.
+     1/44: $8\cause[3:0]
+     2/44: $6\exception[0:0]
+     3/44: $7\cause[3:0]
+     4/44: $5\exception[0:0]
+     5/44: $6\cause[3:0]
+     6/44: $4\exception[0:0]
+     7/44: $5\cause[3:0]
+     8/44: $14\illegal[0:0]
+     9/44: $4\cause[3:0]
+    10/44: $13\illegal[0:0]
+    11/44: $12\illegal[0:0]
+    12/44: $7\result[31:0]
+    13/44: $6\result[31:0]
+    14/44: $11\illegal[0:0]
+    15/44: $10\illegal[0:0]
+    16/44: $5\result[31:0]
+    17/44: $9\illegal[0:0]
+    18/44: $4\result[31:0]
+    19/44: $8\illegal[0:0]
+    20/44: $7\illegal[0:0]
+    21/44: $3\result[31:0]
+    22/44: $6\illegal[0:0]
+    23/44: $3\cause[3:0]
+    24/44: $3\exception[0:0]
+    25/44: $2\strobes[3:0]
+    26/44: $5\illegal[0:0]
+    27/44: $2\cause[3:0]
+    28/44: $2\exception[0:0]
+    29/44: $2\result[31:0]
+    30/44: $4\illegal[0:0]
+    31/44: $2\next_pc[31:0]
+    32/44: $2\taken[0:0]
+    33/44: $3\illegal[0:0]
+    34/44: $2\illegal[0:0]
+    35/44: $1\result[31:0]
+    36/44: $1\write_rd[0:0]
+    37/44: $1\taken[0:0]
+    38/44: $1\exception[0:0]
+    39/44: $1\illegal[0:0]
+    40/44: $1\memory_op[0:0]
+    41/44: $1\cause[3:0]
+    42/44: $1\strobes[3:0]
+    43/44: $1\store_data[31:0]
+    44/44: $1\next_pc[31:0]
+
+3.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\rv32i_core.\next_pc' from process `\rv32i_core.$proc$rtl/rv32i_core.sv:39$55'.
+No latch inferred for signal `\rv32i_core.\result' from process `\rv32i_core.$proc$rtl/rv32i_core.sv:39$55'.
+No latch inferred for signal `\rv32i_core.\store_data' from process `\rv32i_core.$proc$rtl/rv32i_core.sv:39$55'.
+No latch inferred for signal `\rv32i_core.\strobes' from process `\rv32i_core.$proc$rtl/rv32i_core.sv:39$55'.
+No latch inferred for signal `\rv32i_core.\cause' from process `\rv32i_core.$proc$rtl/rv32i_core.sv:39$55'.
+No latch inferred for signal `\rv32i_core.\write_rd' from process `\rv32i_core.$proc$rtl/rv32i_core.sv:39$55'.
+No latch inferred for signal `\rv32i_core.\memory_op' from process `\rv32i_core.$proc$rtl/rv32i_core.sv:39$55'.
+No latch inferred for signal `\rv32i_core.\illegal' from process `\rv32i_core.$proc$rtl/rv32i_core.sv:39$55'.
+No latch inferred for signal `\rv32i_core.\exception' from process `\rv32i_core.$proc$rtl/rv32i_core.sv:39$55'.
+No latch inferred for signal `\rv32i_core.\taken' from process `\rv32i_core.$proc$rtl/rv32i_core.sv:39$55'.
+
+3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\rv32i_core.\trapped' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$923' with positive edge clock.
+Creating register for signal `\rv32i_core.\trap_cause' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$924' with positive edge clock.
+Creating register for signal `\rv32i_core.\trap_pc' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$925' with positive edge clock.
+Creating register for signal `\rv32i_core.\retire_valid' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$926' with positive edge clock.
+Creating register for signal `\rv32i_core.\retire_pc' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$927' with positive edge clock.
+Creating register for signal `\rv32i_core.\retire_insn' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$928' with positive edge clock.
+Creating register for signal `\rv32i_core.\retire_data' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$929' with positive edge clock.
+Creating register for signal `\rv32i_core.\retire_rd' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$930' with positive edge clock.
+Creating register for signal `\rv32i_core.\pc' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$931' with positive edge clock.
+Creating register for signal `\rv32i_core.\index' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$932' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$2_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$933' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$3_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$934' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$4_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$935' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$5_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$936' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$6_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$937' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$7_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$938' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$8_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$939' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$9_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$940' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$10_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$941' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$11_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$942' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$12_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$943' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$13_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$944' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$14_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$945' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$15_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$946' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$16_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$947' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$17_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$948' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$18_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$949' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$19_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$950' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$20_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$951' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$21_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$952' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$22_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$953' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$23_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$954' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$24_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$955' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$25_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$956' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$26_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$957' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$27_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$958' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$28_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$959' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$29_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$960' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$30_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$961' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$31_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$962' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$32_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$963' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:139$33_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$964' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:144$34_ADDR' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$965' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:144$34_DATA' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$966' with positive edge clock.
+Creating register for signal `\rv32i_core.$memwr$\regs$rtl/rv32i_core.sv:144$34_EN' using process `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+  created $dff cell `$procdff$967' with positive edge clock.
+
+3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 4 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.sv:134$127'.
+Found and cleaned up 21 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.sv:39$55'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.sv:39$55'.
+Cleaned up 25 empty switches.
+
+3.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+<suppressed ~39 debug messages>
+
+3.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+3.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 38 unused cells and 317 unused wires.
+<suppressed ~40 debug messages>
+
+3.5. Executing CHECK pass (checking for obvious problems).
+Checking module rv32i_core...
+Found and reported 0 problems.
+
+3.6. Executing OPT pass (performing simple optimizations).
+
+3.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+3.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 444 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 306 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 304 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+<suppressed ~420 debug messages>
+Removed a total of 140 cells.
+
+3.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port B of cell $procmux$479: \trapped -> 1'1
+      Replacing known input bits on port A of cell $procmux$477: \trapped -> 1'0
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$709.
+    dead port 2/2 on $mux $procmux$697.
+    dead port 2/2 on $mux $procmux$687.
+    dead port 2/2 on $mux $procmux$677.
+    dead port 2/2 on $mux $procmux$662.
+    dead port 2/2 on $mux $procmux$647.
+    dead port 2/2 on $mux $procmux$645.
+    dead port 2/2 on $mux $procmux$635.
+    dead port 2/2 on $mux $procmux$633.
+    dead port 2/2 on $mux $procmux$624.
+    dead port 2/2 on $mux $procmux$622.
+    dead port 2/2 on $mux $procmux$613.
+    dead port 2/2 on $mux $procmux$611.
+    dead port 1/2 on $mux $procmux$609.
+    dead port 2/2 on $mux $procmux$599.
+    dead port 2/2 on $mux $procmux$597.
+    dead port 1/2 on $mux $procmux$595.
+    dead port 2/2 on $mux $procmux$585.
+    dead port 2/2 on $mux $procmux$832.
+    dead port 2/2 on $mux $procmux$577.
+    dead port 2/2 on $mux $procmux$819.
+    dead port 2/2 on $mux $procmux$563.
+    dead port 2/2 on $mux $procmux$549.
+    dead port 2/2 on $mux $procmux$547.
+    dead port 2/2 on $mux $procmux$537.
+    dead port 2/2 on $mux $procmux$785.
+    dead port 2/2 on $mux $procmux$530.
+    dead port 2/2 on $mux $procmux$524.
+    dead port 2/2 on $mux $procmux$518.
+    dead port 2/2 on $mux $procmux$773.
+    dead port 1/2 on $mux $procmux$516.
+    dead port 2/2 on $mux $procmux$509.
+    dead port 1/2 on $mux $procmux$507.
+    dead port 1/2 on $mux $procmux$293.
+    dead port 1/2 on $mux $procmux$287.
+    dead port 1/2 on $mux $procmux$281.
+    dead port 1/2 on $mux $procmux$275.
+    dead port 1/2 on $mux $procmux$272.
+    dead port 1/2 on $mux $procmux$266.
+    dead port 1/2 on $mux $procmux$263.
+    dead port 1/2 on $mux $procmux$257.
+    dead port 1/2 on $mux $procmux$254.
+    dead port 1/2 on $mux $procmux$248.
+    dead port 1/2 on $mux $procmux$245.
+    dead port 1/2 on $mux $procmux$243.
+    dead port 1/2 on $mux $procmux$236.
+    dead port 1/2 on $mux $procmux$233.
+    dead port 1/2 on $mux $procmux$231.
+    dead port 1/2 on $mux $procmux$224.
+    dead port 1/2 on $mux $procmux$221.
+    dead port 1/2 on $mux $procmux$219.
+    dead port 2/2 on $mux $procmux$758.
+    dead port 2/2 on $mux $procmux$743.
+    dead port 2/2 on $mux $procmux$732.
+    dead port 2/2 on $mux $procmux$721.
+Removed 55 multiplexer ports.
+<suppressed ~286 debug messages>
+
+3.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+    New ctrl vector for $pmux cell $procmux$837: { $procmux$876_CMP $procmux$877_CMP $procmux$897_CMP $auto$opt_reduce.cc:135:opt_pmux$1002 $procmux$883_CMP $procmux$884_CMP }
+    New ctrl vector for $pmux cell $procmux$873: { $procmux$895_CMP $procmux$875_CMP $procmux$876_CMP $procmux$877_CMP $procmux$911_CMP $procmux$897_CMP $procmux$920_CMP $procmux$921_CMP $auto$opt_reduce.cc:135:opt_pmux$1004 }
+    New ctrl vector for $pmux cell $procmux$568: $auto$opt_reduce.cc:135:opt_pmux$1006
+    New ctrl vector for $pmux cell $procmux$812: $auto$opt_reduce.cc:135:opt_pmux$1008
+    New ctrl vector for $pmux cell $procmux$668: { $procmux$815_CMP $procmux$817_CMP $auto$opt_reduce.cc:135:opt_pmux$1010 }
+    New ctrl vector for $pmux cell $procmux$863: { $procmux$920_CMP $auto$opt_reduce.cc:135:opt_pmux$1012 }
+    Consolidated identical input bits for $mux cell $procmux$392:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$2_EN[31:0]$128 [0] }
+    Consolidated identical input bits for $mux cell $procmux$389:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$3_EN[31:0]$129 [0] }
+    Consolidated identical input bits for $mux cell $procmux$386:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$4_EN[31:0]$130 [0] }
+    Consolidated identical input bits for $mux cell $procmux$383:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$5_EN[31:0]$131 [0] }
+    Consolidated identical input bits for $mux cell $procmux$380:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$6_EN[31:0]$132 [0] }
+    Consolidated identical input bits for $mux cell $procmux$377:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$7_EN[31:0]$133 [0] }
+    Consolidated identical input bits for $mux cell $procmux$374:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$8_EN[31:0]$134 [0] }
+    Consolidated identical input bits for $mux cell $procmux$371:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$9_EN[31:0]$135 [0] }
+    Consolidated identical input bits for $mux cell $procmux$368:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$10_EN[31:0]$136 [0] }
+    Consolidated identical input bits for $mux cell $procmux$365:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$11_EN[31:0]$137 [0] }
+    Consolidated identical input bits for $mux cell $procmux$362:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$12_EN[31:0]$138 [0] }
+    Consolidated identical input bits for $mux cell $procmux$359:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$13_EN[31:0]$139 [0] }
+    Consolidated identical input bits for $mux cell $procmux$356:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$14_EN[31:0]$140 [0] }
+    Consolidated identical input bits for $mux cell $procmux$353:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$15_EN[31:0]$141 [0] }
+    Consolidated identical input bits for $mux cell $procmux$350:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$16_EN[31:0]$142 [0] }
+    Consolidated identical input bits for $mux cell $procmux$347:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$17_EN[31:0]$143 [0] }
+    Consolidated identical input bits for $mux cell $procmux$344:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$18_EN[31:0]$144 [0] }
+    Consolidated identical input bits for $mux cell $procmux$341:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$19_EN[31:0]$145 [0] }
+    Consolidated identical input bits for $mux cell $procmux$338:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$20_EN[31:0]$146 [0] }
+    Consolidated identical input bits for $mux cell $procmux$335:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$21_EN[31:0]$147 [0] }
+    Consolidated identical input bits for $mux cell $procmux$332:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$22_EN[31:0]$148 [0] }
+    Consolidated identical input bits for $mux cell $procmux$329:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$23_EN[31:0]$149 [0] }
+    Consolidated identical input bits for $mux cell $procmux$326:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$24_EN[31:0]$150 [0] }
+    Consolidated identical input bits for $mux cell $procmux$323:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$25_EN[31:0]$151 [0] }
+    Consolidated identical input bits for $mux cell $procmux$320:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$26_EN[31:0]$152 [0] }
+    Consolidated identical input bits for $mux cell $procmux$317:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$27_EN[31:0]$153 [0] }
+    Consolidated identical input bits for $mux cell $procmux$314:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$28_EN[31:0]$154 [0] }
+    Consolidated identical input bits for $mux cell $procmux$311:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$29_EN[31:0]$155 [0] }
+    Consolidated identical input bits for $mux cell $procmux$308:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$30_EN[31:0]$156 [0] }
+    Consolidated identical input bits for $mux cell $procmux$305:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$31_EN[31:0]$157 [0] }
+    Consolidated identical input bits for $mux cell $procmux$302:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$32_EN[31:0]$158 [0] }
+    Consolidated identical input bits for $mux cell $procmux$299:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] $0$memwr$\regs$rtl/rv32i_core.sv:139$33_EN[31:0]$159 [0] }
+    New ctrl vector for $pmux cell $procmux$848: $auto$opt_reduce.cc:135:opt_pmux$1014
+    Consolidated identical input bits for $mux cell $procmux$216:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$procmux$216_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$216_Y [0]
+      New connections: $procmux$216_Y [31:1] = { $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] $procmux$216_Y [0] }
+    New ctrl vector for $pmux cell $procmux$767: $auto$opt_reduce.cc:135:opt_pmux$1016
+    New ctrl vector for $pmux cell $procmux$717: $auto$opt_reduce.cc:135:opt_pmux$1018
+    New ctrl vector for $pmux cell $procmux$890: $auto$opt_reduce.cc:135:opt_pmux$1020
+  Optimizing cells in module \rv32i_core.
+    Consolidated identical input bits for $mux cell $procmux$252:
+      Old ports: A=$4$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$209, B=0, Y=$procmux$252_Y
+      New ports: A=$procmux$216_Y [0], B=1'0, Y=$procmux$252_Y [0]
+      New connections: $procmux$252_Y [31:1] = { $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] $procmux$252_Y [0] }
+  Optimizing cells in module \rv32i_core.
+    Consolidated identical input bits for $mux cell $procmux$278:
+      Old ports: A=$3$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$204, B=0, Y=$procmux$278_Y
+      New ports: A=$procmux$252_Y [0], B=1'0, Y=$procmux$278_Y [0]
+      New connections: $procmux$278_Y [31:1] = { $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] $procmux$278_Y [0] }
+  Optimizing cells in module \rv32i_core.
+    Consolidated identical input bits for $mux cell $procmux$395:
+      Old ports: A=$2$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$201, B=0, Y=$0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162
+      New ports: A=$procmux$278_Y [0], B=1'0, Y=$0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0]
+      New connections: $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [31:1] = { $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] $0$memwr$\regs$rtl/rv32i_core.sv:144$34_EN[31:0]$162 [0] }
+  Optimizing cells in module \rv32i_core.
+Performed a total of 46 changes.
+
+3.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 259 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 226 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+<suppressed ~99 debug messages>
+Removed a total of 33 cells.
+
+3.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 0 unused cells and 228 unused wires.
+<suppressed ~1 debug messages>
+
+3.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+3.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~135 debug messages>
+
+3.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+    New ctrl vector for $pmux cell $procmux$873: { $auto$opt_reduce.cc:135:opt_pmux$1004 $auto$opt_reduce.cc:135:opt_pmux$1022 $procmux$786_CMP $eq$rtl/rv32i_core.sv:30$41_Y $eq$rtl/rv32i_core.sv:30$43_Y $procmux$600_CMP $procmux$550_CMP $procmux$510_CMP }
+  Optimizing cells in module \rv32i_core.
+Performed a total of 1 changes.
+
+3.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 227 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Removed a total of 0 cells.
+
+3.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+3.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+3.6.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.6.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~134 debug messages>
+
+3.6.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+Performed a total of 0 changes.
+
+3.6.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 227 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Removed a total of 0 cells.
+
+3.6.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.6.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+3.6.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+3.6.23. Finished fast OPT passes. (There is nothing left to do.)
+
+3.7. Executing FSM pass (extract and optimize FSM).
+
+3.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking rv32i_core.trap_cause as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+
+3.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+3.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+3.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+3.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+3.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+3.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+3.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+3.8. Executing OPT pass (performing simple optimizations).
+
+3.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+3.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 227 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Removed a total of 0 cells.
+
+3.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~134 debug messages>
+
+3.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+Performed a total of 0 changes.
+
+3.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 227 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Removed a total of 0 cells.
+
+3.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$930 ($dff) from module rv32i_core (D = $procmux$425_Y, Q = \retire_rd, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:337:slice$1023 ($sdff) from module rv32i_core (D = $ternary$rtl/rv32i_core.sv:146$210_Y, Q = \retire_rd).
+Adding SRST signal on $procdff$931 ($dff) from module rv32i_core (D = $procmux$416_Y, Q = \pc, rval = 0).
+Adding EN signal on $auto$ff.cc:337:slice$1031 ($sdff) from module rv32i_core (D = \next_pc, Q = \pc).
+Adding SRST signal on $procdff$923 ($dff) from module rv32i_core (D = $procmux$479_Y, Q = \trapped, rval = 1'0).
+Adding SRST signal on $procdff$924 ($dff) from module rv32i_core (D = $procmux$470_Y, Q = \trap_cause, rval = 4'0000).
+Adding EN signal on $auto$ff.cc:337:slice$1040 ($sdff) from module rv32i_core (D = \cause, Q = \trap_cause).
+Adding SRST signal on $procdff$925 ($dff) from module rv32i_core (D = $procmux$461_Y, Q = \trap_pc, rval = 0).
+Adding EN signal on $auto$ff.cc:337:slice$1046 ($sdff) from module rv32i_core (D = \pc, Q = \trap_pc).
+Adding SRST signal on $procdff$926 ($dff) from module rv32i_core (D = $procmux$405_Y, Q = \retire_valid, rval = 1'0).
+Adding SRST signal on $procdff$927 ($dff) from module rv32i_core (D = $procmux$452_Y, Q = \retire_pc, rval = 0).
+Adding EN signal on $auto$ff.cc:337:slice$1055 ($sdff) from module rv32i_core (D = \pc, Q = \retire_pc).
+Adding SRST signal on $procdff$928 ($dff) from module rv32i_core (D = $procmux$443_Y, Q = \retire_insn, rval = 0).
+Adding EN signal on $auto$ff.cc:337:slice$1063 ($sdff) from module rv32i_core (D = \imem_rdata, Q = \retire_insn).
+Adding SRST signal on $procdff$929 ($dff) from module rv32i_core (D = $procmux$434_Y, Q = \retire_data, rval = 0).
+Adding EN signal on $auto$ff.cc:337:slice$1071 ($sdff) from module rv32i_core (D = $ternary$rtl/rv32i_core.sv:147$213_Y, Q = \retire_data).
+
+3.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 24 unused cells and 24 unused wires.
+<suppressed ~25 debug messages>
+
+3.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+3.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~106 debug messages>
+
+3.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+Performed a total of 0 changes.
+
+3.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 223 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 213 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 208 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+<suppressed ~45 debug messages>
+Removed a total of 15 cells.
+
+3.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 0 unused cells and 15 unused wires.
+<suppressed ~1 debug messages>
+
+3.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+3.8.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.8.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~106 debug messages>
+
+3.8.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+Performed a total of 0 changes.
+
+3.8.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 208 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Removed a total of 0 cells.
+
+3.8.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.8.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+3.8.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+3.8.23. Finished fast OPT passes. (There is nothing left to do.)
+
+3.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$982 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$983 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$984 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$985 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$986 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$987 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$981 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$980 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$974 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$973 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$997 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$977 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$978 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$979 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$998 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$988 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$989 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$975 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$990 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$976 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$991 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$972 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$992 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$993 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$994 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$999 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$968 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$969 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$995 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$970 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$996 (regs).
+Removed top 27 address bits (of 32) from memory init port rv32i_core.$auto$proc_memwr.cc:45:proc_memwr$971 (regs).
+Removed top 29 bits (of 32) from port B of cell rv32i_core.$add$rtl/rv32i_core.sv:47$60 ($add).
+Removed top 3 bits (of 4) from port A of cell rv32i_core.$shl$rtl/rv32i_core.sv:77$80 ($shl).
+Removed top 2 bits (of 4) from port A of cell rv32i_core.$shl$rtl/rv32i_core.sv:78$81 ($shl).
+Removed top 20 bits (of 32) from port B of cell rv32i_core.$lt$rtl/rv32i_core.sv:88$89 ($lt).
+Removed top 1 bits (of 7) from port B of cell rv32i_core.$eq$rtl/rv32i_core.sv:112$116 ($eq).
+Removed top 25 bits (of 32) from port B of cell rv32i_core.$eq$rtl/rv32i_core.sv:123$122 ($eq).
+Removed top 11 bits (of 32) from port B of cell rv32i_core.$eq$rtl/rv32i_core.sv:124$123 ($eq).
+Removed top 2 bits (of 4) from mux cell rv32i_core.$procmux$504 ($mux).
+Removed top 1 bits (of 3) from port B of cell rv32i_core.$procmux$674_CMP0 ($eq).
+Removed top 1 bits (of 4) from mux cell rv32i_core.$procmux$685 ($mux).
+Removed top 1 bits (of 4) from mux cell rv32i_core.$procmux$730 ($mux).
+Removed top 1 bits (of 3) from port B of cell rv32i_core.$procmux$770_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell rv32i_core.$procmux$817_CMP0 ($eq).
+Removed top 3 bits (of 7) from port B of cell rv32i_core.$procmux$875_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell rv32i_core.$procmux$876_CMP0 ($eq).
+Removed top 2 bits (of 7) from port B of cell rv32i_core.$procmux$877_CMP0 ($eq).
+Removed top 2 bits (of 7) from port B of cell rv32i_core.$procmux$883_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell rv32i_core.$procmux$884_CMP0 ($eq).
+Removed top 5 bits (of 7) from port B of cell rv32i_core.$procmux$897_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell rv32i_core.$procmux$911_CMP0 ($eq).
+Removed top 1 bits (of 4) from wire rv32i_core.$3\cause[3:0].
+Removed top 1 bits (of 4) from wire rv32i_core.$2\cause[3:0].
+Removed top 2 bits (of 4) from wire rv32i_core.$5\cause[3:0].
+
+3.10. Executing PEEPOPT pass (run peephole optimizers).
+
+3.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+3.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module rv32i_core:
+  creating $macc model for $add$rtl/rv32i_core.sv:106$110 ($add).
+  creating $macc model for $sub$rtl/rv32i_core.sv:106$109 ($sub).
+  creating $macc model for $add$rtl/rv32i_core.sv:87$88 ($add).
+  creating $macc model for $add$rtl/rv32i_core.sv:60$70 ($add).
+  creating $macc model for $add$rtl/rv32i_core.sv:47$60 ($add).
+  creating $macc model for $add$rtl/rv32i_core.sv:45$59 ($add).
+  creating $macc model for $add$rtl/rv32i_core.sv:44$57 ($add).
+  creating $macc model for $add$rtl/rv32i_core.sv:30$44 ($add).
+  creating $alu model for $macc $add$rtl/rv32i_core.sv:30$44.
+  creating $alu model for $macc $add$rtl/rv32i_core.sv:44$57.
+  creating $alu model for $macc $add$rtl/rv32i_core.sv:45$59.
+  creating $alu model for $macc $add$rtl/rv32i_core.sv:47$60.
+  creating $alu model for $macc $add$rtl/rv32i_core.sv:60$70.
+  creating $alu model for $macc $add$rtl/rv32i_core.sv:87$88.
+  creating $alu model for $macc $sub$rtl/rv32i_core.sv:106$109.
+  creating $alu model for $macc $add$rtl/rv32i_core.sv:106$110.
+  creating $alu model for $lt$rtl/rv32i_core.sv:109$114 ($lt): merged with $sub$rtl/rv32i_core.sv:106$109.
+  creating $alu model for $lt$rtl/rv32i_core.sv:108$113 ($lt): merged with $sub$rtl/rv32i_core.sv:106$109.
+  creating $alu model for $lt$rtl/rv32i_core.sv:89$90 ($lt): new $alu
+  creating $alu model for $lt$rtl/rv32i_core.sv:88$89 ($lt): new $alu
+  creating $alu model for $ge$rtl/rv32i_core.sv:57$69 ($ge): merged with $sub$rtl/rv32i_core.sv:106$109.
+  creating $alu model for $ge$rtl/rv32i_core.sv:55$67 ($ge): merged with $sub$rtl/rv32i_core.sv:106$109.
+  creating $alu model for $ne$rtl/rv32i_core.sv:53$65 ($ne): merged with $sub$rtl/rv32i_core.sv:106$109.
+  creating $alu model for $eq$rtl/rv32i_core.sv:52$64 ($eq): merged with $sub$rtl/rv32i_core.sv:106$109.
+  creating $alu cell for $lt$rtl/rv32i_core.sv:88$89: $auto$alumacc.cc:512:replace_alu$1084
+  creating $alu cell for $add$rtl/rv32i_core.sv:106$110: $auto$alumacc.cc:512:replace_alu$1091
+  creating $alu cell for $sub$rtl/rv32i_core.sv:106$109, $lt$rtl/rv32i_core.sv:109$114, $lt$rtl/rv32i_core.sv:108$113, $ge$rtl/rv32i_core.sv:57$69, $ge$rtl/rv32i_core.sv:55$67, $ne$rtl/rv32i_core.sv:53$65, $eq$rtl/rv32i_core.sv:52$64: $auto$alumacc.cc:512:replace_alu$1094
+  creating $alu cell for $lt$rtl/rv32i_core.sv:89$90: $auto$alumacc.cc:512:replace_alu$1119
+  creating $alu cell for $add$rtl/rv32i_core.sv:87$88: $auto$alumacc.cc:512:replace_alu$1124
+  creating $alu cell for $add$rtl/rv32i_core.sv:60$70: $auto$alumacc.cc:512:replace_alu$1127
+  creating $alu cell for $add$rtl/rv32i_core.sv:47$60: $auto$alumacc.cc:512:replace_alu$1130
+  creating $alu cell for $add$rtl/rv32i_core.sv:45$59: $auto$alumacc.cc:512:replace_alu$1133
+  creating $alu cell for $add$rtl/rv32i_core.sv:44$57: $auto$alumacc.cc:512:replace_alu$1136
+  creating $alu cell for $add$rtl/rv32i_core.sv:30$44: $auto$alumacc.cc:512:replace_alu$1139
+  created 10 $alu and 0 $macc cells.
+
+3.13. Executing SHARE pass (SAT-based resource sharing).
+Found 10 cells in module rv32i_core that may be considered for resource sharing.
+  Analyzing resource sharing options for $memrd$\regs$rtl/rv32i_core.sv:22$36 ($memrd):
+    Found 49 activation_patterns using ctrl signal { $procmux$833_CMP $procmux$786_CMP $procmux$600_CMP $procmux$559_CMP $procmux$558_CMP $procmux$556_CMP $procmux$555_CMP $procmux$550_CMP $procmux$486_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:104$101_Y $eq$rtl/rv32i_core.sv:95$96_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:30$43_Y $eq$rtl/rv32i_core.sv:30$41_Y $eq$rtl/rv32i_core.sv:22$35_Y \exception \illegal \trapped \reset }.
+    Found 1 candidates: $memrd$\regs$rtl/rv32i_core.sv:23$39
+    Analyzing resource sharing with $memrd$\regs$rtl/rv32i_core.sv:23$39 ($memrd):
+      Found 29 activation_patterns using ctrl signal { $procmux$786_CMP $procmux$559_CMP $procmux$558_CMP $procmux$556_CMP $procmux$555_CMP $procmux$550_CMP $procmux$486_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:30$43_Y $eq$rtl/rv32i_core.sv:23$38_Y \exception \illegal \trapped \reset }.
+      Forbidden control signals for this pair of cells: { $logic_and$rtl/rv32i_core.sv:129$125_Y $logic_or$rtl/rv32i_core.sv:82$87_Y $logic_or$rtl/rv32i_core.sv:72$78_Y $2\taken[0:0] \exception \dmem_valid }
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $eq$rtl/rv32i_core.sv:30$43_Y $eq$rtl/rv32i_core.sv:30$41_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 3'100
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$833_CMP $eq$rtl/rv32i_core.sv:22$35_Y } = 2'10
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $eq$rtl/rv32i_core.sv:30$41_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 2'10
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $procmux$558_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $procmux$558_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $procmux$556_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $procmux$556_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $procmux$555_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $procmux$555_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:95$96_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 5'11110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:95$96_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 7'1111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$101_Y $eq$rtl/rv32i_core.sv:95$96_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 8'11110000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$101_Y $eq$rtl/rv32i_core.sv:95$96_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 6'111100
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$558_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$558_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$556_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$556_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$555_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$555_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$786_CMP $procmux$558_CMP $procmux$486_CMP $eq$rtl/rv32i_core.sv:22$35_Y \illegal } = 5'11000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$786_CMP $procmux$558_CMP $eq$rtl/rv32i_core.sv:22$35_Y } = 3'110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$786_CMP $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 3'110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$786_CMP $procmux$486_CMP $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:22$35_Y \illegal } = 5'10100
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$786_CMP $procmux$555_CMP $procmux$486_CMP $eq$rtl/rv32i_core.sv:22$35_Y \illegal } = 5'11000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$786_CMP $procmux$555_CMP $eq$rtl/rv32i_core.sv:22$35_Y } = 3'110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$786_CMP $procmux$556_CMP $eq$rtl/rv32i_core.sv:22$35_Y } = 3'110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$786_CMP $procmux$556_CMP $procmux$486_CMP $eq$rtl/rv32i_core.sv:22$35_Y \illegal } = 5'11000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$559_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$559_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$786_CMP $procmux$486_CMP $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:22$35_Y \illegal } = 5'10100
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$786_CMP $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 3'110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$786_CMP $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 3'110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$786_CMP $procmux$486_CMP $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:22$35_Y \illegal } = 5'10100
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $procmux$559_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:22$35_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:22$36: { $procmux$600_CMP $procmux$559_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:22$35_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $eq$rtl/rv32i_core.sv:30$43_Y $eq$rtl/rv32i_core.sv:23$38_Y } = 2'10
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$558_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:23$38_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$558_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:23$38_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$556_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:23$38_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$556_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:23$38_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$555_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:23$38_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$555_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:23$38_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:23$38_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:23$38_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:23$38_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:23$38_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$786_CMP $procmux$558_CMP $procmux$486_CMP $eq$rtl/rv32i_core.sv:23$38_Y \illegal } = 5'11000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$786_CMP $procmux$558_CMP $eq$rtl/rv32i_core.sv:23$38_Y } = 3'110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$786_CMP $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:23$38_Y } = 3'110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$786_CMP $procmux$486_CMP $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:23$38_Y \illegal } = 5'10100
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$786_CMP $procmux$555_CMP $procmux$486_CMP $eq$rtl/rv32i_core.sv:23$38_Y \illegal } = 5'11000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$786_CMP $procmux$555_CMP $eq$rtl/rv32i_core.sv:23$38_Y } = 3'110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$786_CMP $procmux$556_CMP $eq$rtl/rv32i_core.sv:23$38_Y } = 3'110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$786_CMP $procmux$556_CMP $procmux$486_CMP $eq$rtl/rv32i_core.sv:23$38_Y \illegal } = 5'11000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$559_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:23$38_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$559_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:23$38_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$786_CMP $procmux$486_CMP $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:23$38_Y \illegal } = 5'10100
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$786_CMP $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:23$38_Y } = 3'110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$786_CMP $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:23$38_Y } = 3'110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$786_CMP $procmux$486_CMP $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:23$38_Y \illegal } = 5'10100
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:23$38_Y \trapped \reset } = 6'111000
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:23$38_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:23$38_Y } = 4'1110
+      Activation pattern for cell $memrd$\regs$rtl/rv32i_core.sv:23$39: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:23$38_Y \trapped \reset } = 6'111000
+      Size of SAT problem: 56 cells, 607 variables, 2142 clauses
+      According to the SAT solver this pair of cells can not be shared.
+      Model from SAT solver: { $procmux$833_CMP $procmux$786_CMP $procmux$600_CMP $procmux$559_CMP $procmux$558_CMP $procmux$556_CMP $procmux$555_CMP $procmux$550_CMP $procmux$486_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:104$101_Y $eq$rtl/rv32i_core.sv:95$96_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:30$43_Y $eq$rtl/rv32i_core.sv:30$41_Y $eq$rtl/rv32i_core.sv:23$38_Y $eq$rtl/rv32i_core.sv:22$35_Y \illegal \trapped \reset } = 23'00010001010001000000000
+  Analyzing resource sharing options for $memrd$\regs$rtl/rv32i_core.sv:23$39 ($memrd):
+    Found 29 activation_patterns using ctrl signal { $procmux$786_CMP $procmux$559_CMP $procmux$558_CMP $procmux$556_CMP $procmux$555_CMP $procmux$550_CMP $procmux$486_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:30$43_Y $eq$rtl/rv32i_core.sv:23$38_Y \exception \illegal \trapped \reset }.
+    No candidates found.
+  Analyzing resource sharing options for $shr$rtl/rv32i_core.sv:33$47 ($shr):
+    Found 10 activation_patterns using ctrl signal { $procmux$558_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:30$41_Y \exception \trapped \reset }.
+    Found 2 candidates: $shr$rtl/rv32i_core.sv:95$97 $shr$rtl/rv32i_core.sv:113$118
+    Analyzing resource sharing with $shr$rtl/rv32i_core.sv:95$97 ($shr):
+      Found 2 activation_patterns using ctrl signal { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:95$96_Y \exception \trapped \reset }.
+      Activation pattern for cell $shr$rtl/rv32i_core.sv:33$47: { $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:30$41_Y \exception \trapped \reset } = 6'111000
+      Activation pattern for cell $shr$rtl/rv32i_core.sv:33$47: { $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:30$41_Y } = 3'111
+      Activation pattern for cell $shr$rtl/rv32i_core.sv:33$47: { $procmux$558_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:30$41_Y \exception \trapped \reset } = 6'111000
+      Activation pattern for cell $shr$rtl/rv32i_core.sv:33$47: { $procmux$558_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:30$41_Y } = 3'111
+      Activation pattern for cell $shr$rtl/rv32i_core.sv:33$47: { $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:30$41_Y \exception \trapped \reset } = 6'111000
+      Activation pattern for cell $shr$rtl/rv32i_core.sv:33$47: { $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:30$41_Y } = 3'111
+      Activation pattern for cell $shr$rtl/rv32i_core.sv:33$47: { $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:30$41_Y \exception \trapped \reset } = 6'111000
+      Activation pattern for cell $shr$rtl/rv32i_core.sv:33$47: { $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:30$41_Y } = 3'111
+      Activation pattern for cell $shr$rtl/rv32i_core.sv:33$47: { $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:30$41_Y \exception \trapped \reset } = 6'111000
+      Activation pattern for cell $shr$rtl/rv32i_core.sv:33$47: { $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:30$41_Y } = 3'111
+      Activation pattern for cell $shr$rtl/rv32i_core.sv:95$97: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:95$96_Y } = 4'1111
+      Activation pattern for cell $shr$rtl/rv32i_core.sv:95$97: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:95$96_Y \exception \trapped \reset } = 7'1111000
+      Size of SAT problem: 98 cells, 6143 variables, 16793 clauses
+      According to the SAT solver this pair of cells can be shared.
+      Activation signal for $shr$rtl/rv32i_core.sv:95$97: $auto$share.cc:1072:make_cell_activation_logic$1145
+      New cell: $auto$share.cc:663:make_supercell$1152 ($shr)
+  Analyzing resource sharing options for $auto$share.cc:663:make_supercell$1152 ($shr):
+    Found 12 activation_patterns using ctrl signal { $procmux$600_CMP $procmux$558_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:95$96_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:30$41_Y \exception \trapped \reset }.
+    Found 1 candidates: $shr$rtl/rv32i_core.sv:113$118
+    Analyzing resource sharing with $shr$rtl/rv32i_core.sv:113$118 ($shr):
+      Found 2 activation_patterns using ctrl signal { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$101_Y \exception \trapped \reset }.
+      Activation pattern for cell $auto$share.cc:663:make_supercell$1152: { $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:30$41_Y \exception \trapped \reset } = 6'111000
+      Activation pattern for cell $auto$share.cc:663:make_supercell$1152: { $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:30$41_Y } = 3'111
+      Activation pattern for cell $auto$share.cc:663:make_supercell$1152: { $procmux$558_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:30$41_Y \exception \trapped \reset } = 6'111000
+      Activation pattern for cell $auto$share.cc:663:make_supercell$1152: { $procmux$558_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:30$41_Y } = 3'111
+      Activation pattern for cell $auto$share.cc:663:make_supercell$1152: { $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:30$41_Y \exception \trapped \reset } = 6'111000
+      Activation pattern for cell $auto$share.cc:663:make_supercell$1152: { $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:30$41_Y } = 3'111
+      Activation pattern for cell $auto$share.cc:663:make_supercell$1152: { $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:30$41_Y \exception \trapped \reset } = 6'111000
+      Activation pattern for cell $auto$share.cc:663:make_supercell$1152: { $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:30$41_Y } = 3'111
+      Activation pattern for cell $auto$share.cc:663:make_supercell$1152: { $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:30$41_Y \exception \trapped \reset } = 6'111000
+      Activation pattern for cell $auto$share.cc:663:make_supercell$1152: { $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:30$41_Y } = 3'111
+      Activation pattern for cell $auto$share.cc:663:make_supercell$1152: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:95$96_Y } = 4'1111
+      Activation pattern for cell $auto$share.cc:663:make_supercell$1152: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:95$96_Y \exception \trapped \reset } = 7'1111000
+      Activation pattern for cell $shr$rtl/rv32i_core.sv:113$118: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$101_Y } = 4'1110
+      Activation pattern for cell $shr$rtl/rv32i_core.sv:113$118: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$101_Y \exception \trapped \reset } = 7'1110000
+      Size of SAT problem: 98 cells, 6152 variables, 16838 clauses
+      According to the SAT solver this pair of cells can be shared.
+      Activation signal for $shr$rtl/rv32i_core.sv:113$118: $auto$share.cc:1072:make_cell_activation_logic$1158
+      New cell: $auto$share.cc:663:make_supercell$1165 ($shr)
+  Analyzing resource sharing options for $auto$share.cc:663:make_supercell$1165 ($shr):
+    Found 14 activation_patterns using ctrl signal { $procmux$600_CMP $procmux$558_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$102_Y $eq$rtl/rv32i_core.sv:104$101_Y $eq$rtl/rv32i_core.sv:95$96_Y $eq$rtl/rv32i_core.sv:72$75_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:30$41_Y \exception \trapped \reset }.
+    No candidates found.
+  Analyzing resource sharing options for $shl$rtl/rv32i_core.sv:75$79 ($shl):
+    Found 1 activation_patterns using ctrl signal $eq$rtl/rv32i_core.sv:30$43_Y.
+    Found 2 candidates: $shl$rtl/rv32i_core.sv:107$112 $shl$rtl/rv32i_core.sv:93$94
+    Analyzing resource sharing with $shl$rtl/rv32i_core.sv:107$112 ($shl):
+      Found 2 activation_patterns using ctrl signal { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y \exception \trapped \reset }.
+      Activation pattern for cell $shl$rtl/rv32i_core.sv:75$79: $eq$rtl/rv32i_core.sv:30$43_Y = 1'1
+      Activation pattern for cell $shl$rtl/rv32i_core.sv:107$112: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y \exception \trapped \reset } = 6'111000
+      Activation pattern for cell $shl$rtl/rv32i_core.sv:107$112: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y } = 3'111
+      Size of SAT problem: 98 cells, 6100 variables, 16594 clauses
+      According to the SAT solver this pair of cells can be shared.
+      Activation signal for $shl$rtl/rv32i_core.sv:75$79: $auto$share.cc:1062:make_cell_activation_logic$1168
+      New cell: $auto$share.cc:663:make_supercell$1175 ($shl)
+  Analyzing resource sharing options for $auto$share.cc:663:make_supercell$1175 ($shl):
+    Found 3 activation_patterns using ctrl signal { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:30$43_Y \exception \trapped \reset }.
+    Found 1 candidates: $shl$rtl/rv32i_core.sv:93$94
+    Analyzing resource sharing with $shl$rtl/rv32i_core.sv:93$94 ($shl):
+      Found 2 activation_patterns using ctrl signal { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y \exception \trapped \reset }.
+      Activation pattern for cell $auto$share.cc:663:make_supercell$1175: $eq$rtl/rv32i_core.sv:30$43_Y = 1'1
+      Activation pattern for cell $auto$share.cc:663:make_supercell$1175: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y \exception \trapped \reset } = 6'111000
+      Activation pattern for cell $auto$share.cc:663:make_supercell$1175: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y } = 3'111
+      Activation pattern for cell $shl$rtl/rv32i_core.sv:93$94: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y \exception \trapped \reset } = 6'111000
+      Activation pattern for cell $shl$rtl/rv32i_core.sv:93$94: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y } = 3'111
+      Size of SAT problem: 98 cells, 6114 variables, 16648 clauses
+      According to the SAT solver this pair of cells can be shared.
+      Activation signal for $shl$rtl/rv32i_core.sv:93$94: $auto$share.cc:1072:make_cell_activation_logic$1181
+      New cell: $auto$share.cc:663:make_supercell$1188 ($shl)
+  Analyzing resource sharing options for $auto$share.cc:663:make_supercell$1188 ($shl):
+    Found 5 activation_patterns using ctrl signal { $procmux$600_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:72$71_Y $eq$rtl/rv32i_core.sv:30$43_Y \exception \trapped \reset }.
+    No candidates found.
+  Analyzing resource sharing options for $sshr$rtl/rv32i_core.sv:112$117 ($sshr):
+    Found 2 activation_patterns using ctrl signal { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$101_Y \exception \trapped \reset }.
+    Found 1 candidates: $sshr$rtl/rv32i_core.sv:96$99
+    Analyzing resource sharing with $sshr$rtl/rv32i_core.sv:96$99 ($sshr):
+      Found 2 activation_patterns using ctrl signal { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$101_Y $eq$rtl/rv32i_core.sv:95$96_Y \exception \trapped \reset }.
+      Activation pattern for cell $sshr$rtl/rv32i_core.sv:112$117: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$101_Y } = 4'1111
+      Activation pattern for cell $sshr$rtl/rv32i_core.sv:112$117: { $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$101_Y \exception \trapped \reset } = 7'1111000
+      Activation pattern for cell $sshr$rtl/rv32i_core.sv:96$99: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$101_Y $eq$rtl/rv32i_core.sv:95$96_Y \exception \trapped \reset } = 8'11110000
+      Activation pattern for cell $sshr$rtl/rv32i_core.sv:96$99: { $procmux$600_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$101_Y $eq$rtl/rv32i_core.sv:95$96_Y } = 5'11110
+      Size of SAT problem: 98 cells, 6118 variables, 16670 clauses
+      According to the SAT solver this pair of cells can be shared.
+      Activation signal for $sshr$rtl/rv32i_core.sv:112$117: $auto$share.cc:1072:make_cell_activation_logic$1194
+      New cell: $auto$share.cc:663:make_supercell$1201 ($sshr)
+  Analyzing resource sharing options for $auto$share.cc:663:make_supercell$1201 ($sshr):
+    Found 4 activation_patterns using ctrl signal { $procmux$600_CMP $procmux$550_CMP $logic_and$rtl/rv32i_core.sv:144$206_Y $eq$rtl/rv32i_core.sv:104$103_Y $eq$rtl/rv32i_core.sv:104$101_Y $eq$rtl/rv32i_core.sv:95$96_Y \exception \trapped \reset }.
+    No candidates found.
+Removing 10 cells in module rv32i_core:
+  Removing cell $sshr$rtl/rv32i_core.sv:96$99 ($sshr).
+  Removing cell $sshr$rtl/rv32i_core.sv:112$117 ($sshr).
+  Removing cell $shl$rtl/rv32i_core.sv:93$94 ($shl).
+  Removing cell $auto$share.cc:663:make_supercell$1175 ($shl).
+  Removing cell $shl$rtl/rv32i_core.sv:107$112 ($shl).
+  Removing cell $shl$rtl/rv32i_core.sv:75$79 ($shl).
+  Removing cell $shr$rtl/rv32i_core.sv:113$118 ($shr).
+  Removing cell $auto$share.cc:663:make_supercell$1152 ($shr).
+  Removing cell $shr$rtl/rv32i_core.sv:95$97 ($shr).
+  Removing cell $shr$rtl/rv32i_core.sv:33$47 ($shr).
+
+3.14. Executing OPT pass (performing simple optimizations).
+
+3.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+<suppressed ~2 debug messages>
+
+3.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 242 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 237 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+<suppressed ~15 debug messages>
+Removed a total of 5 cells.
+
+3.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~120 debug messages>
+
+3.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+Performed a total of 0 changes.
+
+3.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 237 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Removed a total of 0 cells.
+
+3.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 0 unused cells and 20 unused wires.
+<suppressed ~6 debug messages>
+
+3.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+3.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~120 debug messages>
+
+3.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+Performed a total of 0 changes.
+
+3.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 232 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Removed a total of 0 cells.
+
+3.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+3.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+3.14.16. Finished fast OPT passes. (There is nothing left to do.)
+
+3.15. Executing MEMORY pass.
+
+3.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+3.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 496 transformations.
+
+3.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing rv32i_core.regs write port 0.
+  Analyzing rv32i_core.regs write port 1.
+  Analyzing rv32i_core.regs write port 2.
+  Analyzing rv32i_core.regs write port 3.
+  Analyzing rv32i_core.regs write port 4.
+  Analyzing rv32i_core.regs write port 5.
+  Analyzing rv32i_core.regs write port 6.
+  Analyzing rv32i_core.regs write port 7.
+  Analyzing rv32i_core.regs write port 8.
+  Analyzing rv32i_core.regs write port 9.
+  Analyzing rv32i_core.regs write port 10.
+  Analyzing rv32i_core.regs write port 11.
+  Analyzing rv32i_core.regs write port 12.
+  Analyzing rv32i_core.regs write port 13.
+  Analyzing rv32i_core.regs write port 14.
+  Analyzing rv32i_core.regs write port 15.
+  Analyzing rv32i_core.regs write port 16.
+  Analyzing rv32i_core.regs write port 17.
+  Analyzing rv32i_core.regs write port 18.
+  Analyzing rv32i_core.regs write port 19.
+  Analyzing rv32i_core.regs write port 20.
+  Analyzing rv32i_core.regs write port 21.
+  Analyzing rv32i_core.regs write port 22.
+  Analyzing rv32i_core.regs write port 23.
+  Analyzing rv32i_core.regs write port 24.
+  Analyzing rv32i_core.regs write port 25.
+  Analyzing rv32i_core.regs write port 26.
+  Analyzing rv32i_core.regs write port 27.
+  Analyzing rv32i_core.regs write port 28.
+  Analyzing rv32i_core.regs write port 29.
+  Analyzing rv32i_core.regs write port 30.
+  Analyzing rv32i_core.regs write port 31.
+  Analyzing rv32i_core.regs write port 32.
+
+3.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+3.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\regs'[0] in module `\rv32i_core': no output FF found.
+Checking read port `\regs'[1] in module `\rv32i_core': no output FF found.
+Checking read port address `\regs'[0] in module `\rv32i_core': no address FF found.
+Checking read port address `\regs'[1] in module `\rv32i_core': no address FF found.
+
+3.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+3.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+Consolidating read ports of memory rv32i_core.regs by address:
+Consolidating write ports of memory rv32i_core.regs by address:
+  Merging ports 0, 1 (address 5'00000).
+  Merging ports 0, 2 (address 5'00000).
+  Merging ports 0, 3 (address 5'00000).
+  Merging ports 0, 4 (address 5'00000).
+  Merging ports 0, 5 (address 5'00000).
+  Merging ports 0, 6 (address 5'00000).
+  Merging ports 0, 7 (address 5'00000).
+  Merging ports 0, 8 (address 5'00000).
+  Merging ports 0, 9 (address 5'00000).
+  Merging ports 0, 10 (address 5'00000).
+  Merging ports 0, 11 (address 5'00000).
+  Merging ports 0, 12 (address 5'00000).
+  Merging ports 0, 13 (address 5'00000).
+  Merging ports 0, 14 (address 5'00000).
+  Merging ports 0, 15 (address 5'00000).
+  Merging ports 0, 16 (address 5'00000).
+  Merging ports 18, 19 (address 5'10010).
+  Merging ports 20, 21 (address 5'10100).
+  Merging ports 20, 22 (address 5'10100).
+  Merging ports 20, 23 (address 5'10100).
+  Merging ports 24, 25 (address 5'11000).
+  Merging ports 24, 26 (address 5'11000).
+  Merging ports 24, 27 (address 5'11000).
+  Merging ports 24, 28 (address 5'11000).
+  Merging ports 24, 29 (address 5'11000).
+  Merging ports 24, 30 (address 5'11000).
+  Merging ports 24, 31 (address 5'11000).
+Consolidating write ports of memory rv32i_core.regs by address:
+  Merging ports 1, 2 (address 5'10001).
+  Merging ports 1, 3 (address 5'10000).
+  Merging ports 1, 4 (address 5'10000).
+Consolidating write ports of memory rv32i_core.regs by address:
+Consolidating write ports of memory rv32i_core.regs using sat-based resource sharing:
+
+3.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+3.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+3.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+3.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+3.17. Executing OPT pass (performing simple optimizations).
+
+3.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+<suppressed ~37 debug messages>
+
+3.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 178 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 177 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+3.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 1 unused cells and 22 unused wires.
+<suppressed ~2 debug messages>
+
+3.17.5. Finished fast OPT passes.
+
+3.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \regs in module \rv32i_core:
+  created 32 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 62 $mux cells.
+  write interface: 96 write mux blocks.
+
+3.19. Executing OPT pass (performing simple optimizations).
+
+3.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+<suppressed ~109 debug messages>
+
+3.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 418 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Removed a total of 0 cells.
+
+3.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~489 debug messages>
+
+3.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+    Consolidated identical input bits for $mux cell $procmux$685:
+      Old ports: A=3'000, B=3'110, Y=$3\cause[3:0]
+      New ports: A=1'0, B=1'1, Y=$3\cause[3:0] [1]
+      New connections: { $3\cause[3:0] [2] $3\cause[3:0] [0] } = { $3\cause[3:0] [1] 1'0 }
+    Consolidated identical input bits for $mux cell $procmux$783:
+      Old ports: A={ $add$rtl/rv32i_core.sv:40$56_Y [31:2] \pc [1:0] }, B={ $add$rtl/rv32i_core.sv:60$70_Y [31:1] \pc [0] }, Y=$2\next_pc[31:0]
+      New ports: A={ $add$rtl/rv32i_core.sv:40$56_Y [31:2] \pc [1] }, B=$add$rtl/rv32i_core.sv:60$70_Y [31:1], Y=$2\next_pc[31:0] [31:1]
+      New connections: $2\next_pc[31:0] [0] = \pc [0]
+    Consolidated identical input bits for $mux cell $procmux$522:
+      Old ports: A={ 2'00 $5\cause[3:0] }, B=4'1011, Y=$4\cause[3:0]
+      New ports: A={ 1'0 $5\cause[3:0] }, B=3'111, Y={ $4\cause[3:0] [3] $4\cause[3:0] [1:0] }
+      New connections: $4\cause[3:0] [2] = 1'0
+    Consolidated identical input bits for $mux cell $procmux$504:
+      Old ports: A=2'00, B=2'11, Y=$5\cause[3:0]
+      New ports: A=1'0, B=1'1, Y=$5\cause[3:0] [0]
+      New connections: $5\cause[3:0] [1] = $5\cause[3:0] [0]
+    Consolidated identical input bits for $mux cell $procmux$730:
+      Old ports: A=3'000, B=3'100, Y=$2\cause[3:0]
+      New ports: A=1'0, B=1'1, Y=$2\cause[3:0] [2]
+      New connections: $2\cause[3:0] [1:0] = 2'00
+  Optimizing cells in module \rv32i_core.
+    Consolidated identical input bits for $mux cell $procmux$522:
+      Old ports: A={ 1'0 $5\cause[3:0] }, B=3'111, Y={ $4\cause[3:0] [3] $4\cause[3:0] [1:0] }
+      New ports: A={ 1'0 $5\cause[3:0] [0] }, B=2'11, Y={ $4\cause[3:0] [3] $4\cause[3:0] [0] }
+      New connections: $4\cause[3:0] [1] = $4\cause[3:0] [0]
+  Optimizing cells in module \rv32i_core.
+Performed a total of 6 changes.
+
+3.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 418 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Removed a total of 0 cells.
+
+3.19.6. Executing OPT_SHARE pass.
+    Found cells that share an operand and can be merged by moving the $pmux $procmux$705 in front of them:
+        $shl$rtl/rv32i_core.sv:78$81
+        $shl$rtl/rv32i_core.sv:77$80
+
+3.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 0 unused cells and 202 unused wires.
+<suppressed ~1 debug messages>
+
+3.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+<suppressed ~4 debug messages>
+
+3.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~488 debug messages>
+
+3.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+    New ctrl vector for $pmux cell $procmux$705: { $eq$rtl/rv32i_core.sv:72$75_Y $auto$opt_reduce.cc:135:opt_pmux$1968 }
+    Consolidated identical input bits for $mux cell $auto$opt_share.cc:246:merge_operators$1965:
+      Old ports: A=2'01, B=2'11, Y=$auto$rtlil.cc:3392:Pmux$1966
+      New ports: A=1'0, B=1'1, Y=$auto$rtlil.cc:3392:Pmux$1966 [1]
+      New connections: $auto$rtlil.cc:3392:Pmux$1966 [0] = 1'1
+  Optimizing cells in module \rv32i_core.
+Performed a total of 2 changes.
+
+3.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 416 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Removed a total of 0 cells.
+
+3.19.14. Executing OPT_SHARE pass.
+
+3.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\regs[0]$1208 ($dff) from module rv32i_core (D = $memory\regs$wrmux[0][2][0]$y$1491, Q = \regs[0]).
+Adding EN signal on $memory\regs[1]$1210 ($dff) from module rv32i_core (D = $memory\regs$wrmux[1][2][0]$y$1509, Q = \regs[1]).
+Adding EN signal on $memory\regs[2]$1212 ($dff) from module rv32i_core (D = $memory\regs$wrmux[2][2][0]$y$1527, Q = \regs[2]).
+Adding EN signal on $memory\regs[3]$1214 ($dff) from module rv32i_core (D = $memory\regs$wrmux[3][2][0]$y$1543, Q = \regs[3]).
+Adding EN signal on $memory\regs[4]$1216 ($dff) from module rv32i_core (D = $memory\regs$wrmux[4][2][0]$y$1561, Q = \regs[4]).
+Adding EN signal on $memory\regs[5]$1218 ($dff) from module rv32i_core (D = $memory\regs$wrmux[5][2][0]$y$1575, Q = \regs[5]).
+Adding EN signal on $memory\regs[6]$1220 ($dff) from module rv32i_core (D = $memory\regs$wrmux[6][2][0]$y$1589, Q = \regs[6]).
+Adding EN signal on $memory\regs[7]$1222 ($dff) from module rv32i_core (D = $memory\regs$wrmux[7][2][0]$y$1603, Q = \regs[7]).
+Adding EN signal on $memory\regs[8]$1224 ($dff) from module rv32i_core (D = $memory\regs$wrmux[8][2][0]$y$1623, Q = \regs[8]).
+Adding EN signal on $memory\regs[9]$1226 ($dff) from module rv32i_core (D = $memory\regs$wrmux[9][2][0]$y$1637, Q = \regs[9]).
+Adding EN signal on $memory\regs[10]$1228 ($dff) from module rv32i_core (D = $memory\regs$wrmux[10][2][0]$y$1651, Q = \regs[10]).
+Adding EN signal on $memory\regs[11]$1230 ($dff) from module rv32i_core (D = $memory\regs$wrmux[11][2][0]$y$1665, Q = \regs[11]).
+Adding EN signal on $memory\regs[12]$1232 ($dff) from module rv32i_core (D = $memory\regs$wrmux[12][2][0]$y$1681, Q = \regs[12]).
+Adding EN signal on $memory\regs[13]$1234 ($dff) from module rv32i_core (D = $memory\regs$wrmux[13][2][0]$y$1695, Q = \regs[13]).
+Adding EN signal on $memory\regs[14]$1236 ($dff) from module rv32i_core (D = $memory\regs$wrmux[14][2][0]$y$1709, Q = \regs[14]).
+Adding EN signal on $memory\regs[15]$1238 ($dff) from module rv32i_core (D = $memory\regs$wrmux[15][2][0]$y$1723, Q = \regs[15]).
+Adding EN signal on $memory\regs[16]$1240 ($dff) from module rv32i_core (D = $memory\regs$wrmux[16][2][0]$y$1745, Q = \regs[16]).
+Adding EN signal on $memory\regs[17]$1242 ($dff) from module rv32i_core (D = $memory\regs$wrmux[17][2][0]$y$1759, Q = \regs[17]).
+Adding EN signal on $memory\regs[18]$1244 ($dff) from module rv32i_core (D = $memory\regs$wrmux[18][2][0]$y$1773, Q = \regs[18]).
+Adding EN signal on $memory\regs[19]$1246 ($dff) from module rv32i_core (D = $memory\regs$wrmux[19][2][0]$y$1787, Q = \regs[19]).
+Adding EN signal on $memory\regs[20]$1248 ($dff) from module rv32i_core (D = $memory\regs$wrmux[20][2][0]$y$1803, Q = \regs[20]).
+Adding EN signal on $memory\regs[21]$1250 ($dff) from module rv32i_core (D = $memory\regs$wrmux[21][2][0]$y$1817, Q = \regs[21]).
+Adding EN signal on $memory\regs[22]$1252 ($dff) from module rv32i_core (D = $memory\regs$wrmux[22][2][0]$y$1831, Q = \regs[22]).
+Adding EN signal on $memory\regs[23]$1254 ($dff) from module rv32i_core (D = $memory\regs$wrmux[23][2][0]$y$1845, Q = \regs[23]).
+Adding EN signal on $memory\regs[24]$1256 ($dff) from module rv32i_core (D = $memory\regs$wrmux[24][2][0]$y$1863, Q = \regs[24]).
+Adding EN signal on $memory\regs[25]$1258 ($dff) from module rv32i_core (D = $memory\regs$wrmux[25][2][0]$y$1877, Q = \regs[25]).
+Adding EN signal on $memory\regs[26]$1260 ($dff) from module rv32i_core (D = $memory\regs$wrmux[26][2][0]$y$1891, Q = \regs[26]).
+Adding EN signal on $memory\regs[27]$1262 ($dff) from module rv32i_core (D = $memory\regs$wrmux[27][2][0]$y$1905, Q = \regs[27]).
+Adding EN signal on $memory\regs[28]$1264 ($dff) from module rv32i_core (D = $memory\regs$wrmux[28][2][0]$y$1921, Q = \regs[28]).
+Adding EN signal on $memory\regs[29]$1266 ($dff) from module rv32i_core (D = $memory\regs$wrmux[29][2][0]$y$1935, Q = \regs[29]).
+Adding EN signal on $memory\regs[30]$1268 ($dff) from module rv32i_core (D = $memory\regs$wrmux[30][2][0]$y$1949, Q = \regs[30]).
+Adding EN signal on $memory\regs[31]$1270 ($dff) from module rv32i_core (D = $memory\regs$wrmux[31][2][0]$y$1963, Q = \regs[31]).
+
+3.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+3.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+<suppressed ~65 debug messages>
+
+3.19.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.19.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~454 debug messages>
+
+3.19.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+Performed a total of 0 changes.
+
+3.19.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 415 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Removed a total of 0 cells.
+
+3.19.22. Executing OPT_SHARE pass.
+
+3.19.23. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:337:slice$1969 ($dffe) from module rv32i_core (D = \result, Q = \regs[0], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$1972 ($dffe) from module rv32i_core (D = \result, Q = \regs[1], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$1975 ($dffe) from module rv32i_core (D = \result, Q = \regs[2], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$1978 ($dffe) from module rv32i_core (D = \result, Q = \regs[3], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$1981 ($dffe) from module rv32i_core (D = \result, Q = \regs[4], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$1984 ($dffe) from module rv32i_core (D = \result, Q = \regs[5], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$1987 ($dffe) from module rv32i_core (D = \result, Q = \regs[6], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$1990 ($dffe) from module rv32i_core (D = \result, Q = \regs[7], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$1993 ($dffe) from module rv32i_core (D = \result, Q = \regs[8], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$1996 ($dffe) from module rv32i_core (D = \result, Q = \regs[9], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$1999 ($dffe) from module rv32i_core (D = \result, Q = \regs[10], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2002 ($dffe) from module rv32i_core (D = \result, Q = \regs[11], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2005 ($dffe) from module rv32i_core (D = \result, Q = \regs[12], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2008 ($dffe) from module rv32i_core (D = \result, Q = \regs[13], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2011 ($dffe) from module rv32i_core (D = \result, Q = \regs[14], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2014 ($dffe) from module rv32i_core (D = \result, Q = \regs[15], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2017 ($dffe) from module rv32i_core (D = \result, Q = \regs[16], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2020 ($dffe) from module rv32i_core (D = \result, Q = \regs[17], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2023 ($dffe) from module rv32i_core (D = \result, Q = \regs[18], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2026 ($dffe) from module rv32i_core (D = \result, Q = \regs[19], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2029 ($dffe) from module rv32i_core (D = \result, Q = \regs[20], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2032 ($dffe) from module rv32i_core (D = \result, Q = \regs[21], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2035 ($dffe) from module rv32i_core (D = \result, Q = \regs[22], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2038 ($dffe) from module rv32i_core (D = \result, Q = \regs[23], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2041 ($dffe) from module rv32i_core (D = \result, Q = \regs[24], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2044 ($dffe) from module rv32i_core (D = \result, Q = \regs[25], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2047 ($dffe) from module rv32i_core (D = \result, Q = \regs[26], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2050 ($dffe) from module rv32i_core (D = \result, Q = \regs[27], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2053 ($dffe) from module rv32i_core (D = \result, Q = \regs[28], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2056 ($dffe) from module rv32i_core (D = \result, Q = \regs[29], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2059 ($dffe) from module rv32i_core (D = \result, Q = \regs[30], rval = 0).
+Adding SRST signal on $auto$ff.cc:337:slice$2062 ($dffe) from module rv32i_core (D = \result, Q = \regs[31], rval = 0).
+
+3.19.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 32 unused cells and 65 unused wires.
+<suppressed ~33 debug messages>
+
+3.19.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+3.19.26. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.19.27. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~126 debug messages>
+
+3.19.28. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+Performed a total of 0 changes.
+
+3.19.29. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 383 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Removed a total of 0 cells.
+
+3.19.30. Executing OPT_SHARE pass.
+
+3.19.31. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.19.32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+3.19.33. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+3.19.34. Finished fast OPT passes. (There is nothing left to do.)
+
+3.20. Executing TECHMAP pass (map to technology primitives).
+
+3.20.1. Executing Verilog-2005 frontend: /opt/homebrew/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/homebrew/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+3.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $sdffce.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod$constmap:6111415c3ecfd9bb520e2072bfee38e7d8bfb139$paramod$e765c459d3029c22a22a27989e94858fd9ebfa9c\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod$constmap:6111415c3ecfd9bb520e2072bfee38e7d8bfb139$paramod$335cfd09f1afa8139c4aafcbbe5f361887b79c5e\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using template $paramod$constmap:6111415c3ecfd9bb520e2072bfee38e7d8bfb139$paramod$feecc7a0dbd012970970f2858f15e786e251f677\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shr.
+Using template $paramod$fbc7873bff55778c0b3173955b7e4bce1d9d6834\_90_alu for cells of type $alu.
+Using template $paramod$6fc37af1c109ae54e8aed83fcd995c12d378ce93\_90_alu for cells of type $alu.
+Using template $paramod$ebf89ea36a793f0f77858f212141d47c833068ad\_90_alu for cells of type $alu.
+Using template $paramod$44a13d10af618e7fbe7b9aad2f6151ffcee1e2fa\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod$98c5892e7dae0085b33c33c218fc8e11ffb9982c\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_or.
+Using template $paramod$constmap:e50d3f437fab7bca3950655c6a032459476a3347$paramod$cbc044d1bfac1f26bafb5691fcbb649e98f6b6fc\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using extmapper simplemap for cells of type $pmux.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010100 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000010100 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000011111 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000011111 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000011110 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000011110 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~3918 debug messages>
+
+3.21. Executing OPT pass (performing simple optimizations).
+
+3.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+<suppressed ~2328 debug messages>
+
+3.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 8851 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 8177 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 8019 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7935 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7897 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7875 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7861 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7853 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7844 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7839 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7830 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7825 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7812 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7804 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7790 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7783 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7772 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7768 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7763 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7762 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 7761 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+<suppressed ~3270 debug messages>
+Removed a total of 1090 cells.
+
+3.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 153 unused cells and 1403 unused wires.
+<suppressed ~154 debug messages>
+
+3.21.5. Finished fast OPT passes.
+
+3.22. Executing ABC pass (technology mapping using ABC).
+
+3.22.1. Extracting gate netlist of module `\rv32i_core' to `<abc-temp-dir>/input.blif'..
+
+3.22.1.1. Executed ABC.
+Extracted 6413 gates and 7537 wires to a netlist network with 1122 inputs and 243 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif
+ABC: + read_library <abc-temp-dir>/stdcells.genlib
+ABC: + strash
+ABC: + &get -n
+ABC: + &fraig -x
+ABC: + &put
+ABC: + scorr
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2
+ABC: + dretime
+ABC: + strash
+ABC: + &get -n
+ABC: + &dch -f
+ABC: + &nf
+ABC: + &put
+ABC: + write_blif <abc-temp-dir>/output.blif
+
+3.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:     1873
+ABC RESULTS:            ANDNOT cells:      191
+ABC RESULTS:               BUF cells:        1
+ABC RESULTS:               MUX cells:     1427
+ABC RESULTS:              NAND cells:     2854
+ABC RESULTS:               NOR cells:      127
+ABC RESULTS:               NOT cells:       38
+ABC RESULTS:                OR cells:      542
+ABC RESULTS:             ORNOT cells:      380
+ABC RESULTS:              XNOR cells:      109
+ABC RESULTS:               XOR cells:       56
+ABC RESULTS:              ZERO cells:        1
+ABC RESULTS:        internal signals:     6172
+ABC RESULTS:           input signals:     1122
+ABC RESULTS:          output signals:      243
+Removing temp directory.
+Removing global temp directory.
+
+3.23. Executing OPT pass (performing simple optimizations).
+
+3.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+<suppressed ~2 debug messages>
+
+3.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 8792 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Removed a total of 0 cells.
+
+3.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+Handling always-active SRST on $auto$ff.cc:337:slice$3160 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3161 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3162 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3163 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3164 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3165 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3166 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3167 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3168 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3169 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3170 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3171 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3172 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3173 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3174 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3175 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3176 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3177 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3191 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3178 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3179 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3180 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3181 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3182 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3183 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3184 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3185 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3186 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3187 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3188 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3189 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Handling always-active SRST on $auto$ff.cc:337:slice$3190 ($_SDFFCE_PN0P_) from module rv32i_core (changing to const D).
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3190 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3189 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3188 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3187 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3186 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3185 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3184 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3183 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3182 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3181 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3180 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3179 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3178 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3191 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3177 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3176 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3175 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3174 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3173 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3172 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3171 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3170 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3169 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3168 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3167 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3166 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3165 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3164 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3163 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3162 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3161 ($_DFFE_PP_) from module rv32i_core.
+Setting constant 0-bit at position 0 on $auto$ff.cc:337:slice$3160 ($_DFFE_PP_) from module rv32i_core.
+
+3.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 0 unused cells and 3408 unused wires.
+<suppressed ~10 debug messages>
+
+3.23.5. Rerunning OPT passes. (Removed registers in this run.)
+
+3.23.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+3.23.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Computing hashes of 8760 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+Computing hashes of 8736 cells of `\rv32i_core'.
+Finding duplicate cells in `\rv32i_core'.
+<suppressed ~72 debug messages>
+Removed a total of 24 cells.
+
+3.23.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.23.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 0 unused cells and 24 unused wires.
+<suppressed ~1 debug messages>
+
+3.23.10. Finished fast OPT passes.
+
+3.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `rv32i_core'. Setting top module to rv32i_core.
+
+3.24.1. Analyzing design hierarchy..
+Top module:  \rv32i_core
+
+3.24.2. Analyzing design hierarchy..
+Top module:  \rv32i_core
+Removed 0 unused modules.
+
+3.25. Printing statistics.
+
+=== rv32i_core ===
+
+        +----------Local Count, excluding submodules.
+        |
+     7502 wires
+     9147 wire bits
+       66 public wires
+     1711 public wire bits
+       17 ports
+      306 port bits
+     8736 cells
+      191   $_ANDNOT_
+     1873   $_AND_
+     1427   $_MUX_
+     2830   $_NAND_
+      127   $_NOR_
+       38   $_NOT_
+      380   $_ORNOT_
+      542   $_OR_
+      992   $_SDFFCE_PN0P_
+      169   $_SDFFE_PP0P_
+        2   $_SDFF_PP0_
+      109   $_XNOR_
+       56   $_XOR_
+
+3.26. Executing CHECK pass (checking for obvious problems).
+Checking module rv32i_core...
+Found and reported 0 problems.
+
+4. Executing CHECK pass (checking for obvious problems).
+Checking module rv32i_core...
+Found and reported 0 problems.
+
+5. Printing statistics.
+
+=== rv32i_core ===
+
+        +----------Local Count, excluding submodules.
+        |
+     7502 wires
+     9147 wire bits
+       66 public wires
+     1711 public wire bits
+       17 ports
+      306 port bits
+     8736 cells
+      191   $_ANDNOT_
+     1873   $_AND_
+     1427   $_MUX_
+     2830   $_NAND_
+      127   $_NOR_
+       38   $_NOT_
+      380   $_ORNOT_
+      542   $_OR_
+      992   $_SDFFCE_PN0P_
+      169   $_SDFFE_PP0P_
+        2   $_SDFF_PP0_
+      109   $_XNOR_
+       56   $_XOR_
+
+6. Executing JSON backend.
+
+End of script. Logfile hash: 974ce434e1, time: 1.56s, user: 0.63s, system: 0.03s, MEM: 62.58 MB peak
+Yosys 0.66 (git sha1 7f8fdfd8d7bc08c749a2a969388d3425d4f369d5, clang++ 21.0.0 -fPIC -O3)
+Time spent: 59% 1x abc (0 sec), 6% 1x share (0 sec), ...
