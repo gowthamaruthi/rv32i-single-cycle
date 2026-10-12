@@ -1,0 +1,14 @@
+{
+  "variant": "area",
+  "setup_slack_ns": 3.37305,
+  "hold_slack_ns": -0.00720968,
+  "standard_cell_area_um2": 22828.7,
+  "vectorless_power_w": 0.00280936,
+  "klayout_drc_markers": 0,
+  "drc_categories": {},
+  "lvs": "UNSUPPORTED: bundled Nangate45 LVS deck is absent; LVS not run",
+  "errors": [
+    "finish__timing__hold__ws: -0.00720968",
+    "finish__timing__drv__hold_violation_count: 1"
+  ]
+}

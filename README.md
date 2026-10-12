@@ -1,6 +1,6 @@
 # RV32I Single-Cycle CPU Core
 
-I use a Python reference model to check this single-cycle SystemVerilog core instruction by instruction. The regression includes directed programs, ten random seeds, trap checks and three RTL mutation tests. Lint and generic Yosys synthesis pass; physical implementation is pending.
+I use a Python reference model to check this single-cycle SystemVerilog core instruction by instruction. The regression includes directed programs, ten random seeds, trap checks and three RTL mutation tests. Lint and generic Yosys synthesis pass. I also run a [Nangate45 physical implementation experiment](physical/README.md) and an optional [UPF/output-isolation experiment](power/README.md).
 
 ## Architecture
 
@@ -59,7 +59,7 @@ The first directed run caught SRA returning `0x40000000` instead of `0xc0000000`
 
 This core has no interrupts, privileged execution, CSRs, caches, wait-state interface or ISA extensions. ECALL/EBREAK halt into a documented test execution environment. Reset is synchronous and clears registers. The core cannot directly connect to synchronous-read block RAM without architectural changes.
 
-I have run generic synthesis with Yosys. Mapped area, power, STA and GDSII results are pending; Design Compiler, Innovus, OpenROAD and OpenSTA have not been run. The next implementation step needs a cell library, memory and I/O timing constraints, followed by placement, CTS, routing and extracted timing checks. The timing budget must include the external combinational memory path.
+I have run Yosys mapping, OpenROAD placement/CTS/routing, extracted timing with its integrated OpenSTA, and KLayout GDS generation on the public Nangate45 platform. [Recorded physical results](physical/README.md) include cell area, setup/hold slack, vectorless power estimates and physical-check findings. The core-only timing budget excludes external memory implementation. Nangate45 is non-manufacturable; these results are not tapeout signoff. Design Compiler and Innovus have not been used on this project.
 
 ## Attribution
 

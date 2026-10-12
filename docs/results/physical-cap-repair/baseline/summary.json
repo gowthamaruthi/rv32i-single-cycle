@@ -1,0 +1,16 @@
+{
+  "variant": "baseline",
+  "setup_slack_ns": 3.8823,
+  "hold_slack_ns": 0.00650199,
+  "standard_cell_area_um2": 17857.9,
+  "vectorless_power_w": 0.00232503,
+  "klayout_drc_markers": 5,
+  "drc_categories": {
+    "METAL4_ANTENNA": 2,
+    "METAL5_ANTENNA": 3
+  },
+  "lvs": "No LVS result recorded",
+  "errors": [
+    "5 KLayout DRC markers: {'METAL4_ANTENNA': 2, 'METAL5_ANTENNA': 3}"
+  ]
+}
