@@ -1,6 +1,6 @@
 # RV32I Single-Cycle CPU Core
 
-I’m building a small RV32I processor with a reproducible verification flow. This milestone includes working SystemVerilog RTL, an independently structured Python reference model, directed and seeded instruction tests, lint, and generic Yosys synthesis. My next milestone is a constrained physical implementation; **this revision does not have GDSII, timing closure, or measured PPA**.
+I use a Python reference model to check this single-cycle SystemVerilog core instruction by instruction. The regression includes directed programs, ten random seeds, trap checks and three RTL mutation tests. Lint and generic Yosys synthesis pass; physical implementation is pending.
 
 ## Architecture
 
@@ -18,7 +18,7 @@ flowchart LR
   ALU --> PC
 ```
 
-The core executes one instruction per clock while running. Instruction and data memories are external and must provide combinational reads. This is an architectural property, not a measured clock-frequency claim. Decode, register file, ALU, immediate generation and control are contained in `rtl/rv32i_core.sv`. See [the specification](SPEC.md) for ports, supported instructions, reset and trap behavior.
+The core executes one instruction per clock while running. Instruction and data memories are external and must provide combinational reads. Decode, register file, ALU, immediate generation and control are contained in `rtl/rv32i_core.sv`. See [the specification](SPEC.md) for ports, supported instructions, reset and trap behavior.
 
 ## Run
 
@@ -49,7 +49,7 @@ python3 scripts/mutations.py
 | Negative tests | Arithmetic shift, subtraction and store-byte-lane mutations detected |
 | Yosys | Generic synthesis and `check -assert` PASS |
 
-The checked-in [result summary](docs/results/summary.json), [logs](docs/results/regression.log), [synthesis log](docs/results/synthesis.log), and [source hashes](docs/results/source-sha256.txt) identify this local run. These bins are finite test-plan observations, not code coverage or architectural certification. The Python model is project verification code, not Spike or an official RISC-V test suite. Shared misunderstandings between the model and RTL remain possible. No formal proof, FPGA measurement, or gate-level timing simulation is claimed.
+The checked-in [result summary](docs/results/summary.json), [logs](docs/results/regression.log), [synthesis log](docs/results/synthesis.log), and [source hashes](docs/results/source-sha256.txt) identify this local run. The operation bins record exercised instructions and branch outcomes; they do not measure code coverage. I use a custom Python model, so shared RTL/model errors remain a risk. Official architectural tests, formal verification, FPGA validation and gate-level timing simulation have not been run.
 
 ### A bug the tests found
 
@@ -59,8 +59,8 @@ The first directed run caught SRA returning `0x40000000` instead of `0xc0000000`
 
 This core has no interrupts, privileged execution, CSRs, caches, wait-state interface or ISA extensions. ECALL/EBREAK halt into a documented test execution environment. Reset is synchronous and clears registers. The core cannot directly connect to synchronous-read block RAM without architectural changes.
 
-I have not run Synopsys Design Compiler, Cadence Innovus, OpenROAD or OpenSTA on this project. Generic synthesis reports are not standard-cell area, power, timing closure or a final layout. A physical milestone needs a distributable platform/library, explicit memory and I/O delay constraints, mapped synthesis, placement/CTS/routing, extracted STA and physical checks before publishing those claims. External memories and the combinational memory round trip must be accounted for in the integration timing budget.
+I have run generic synthesis with Yosys. Mapped area, power, STA and GDSII results are pending; Design Compiler, Innovus, OpenROAD and OpenSTA have not been run. The next implementation step needs a cell library, memory and I/O timing constraints, followed by placement, CTS, routing and extracted timing checks. The timing budget must include the external combinational memory path.
 
 ## Attribution
 
-This is a newly developed educational implementation with AI-assisted development and review; it does not reuse a third-party CPU RTL implementation. Instruction behavior follows the [RISC-V unprivileged RV32I specification](https://docs.riscv.org/reference/isa/unpriv/rv32.html). The execution-environment choices and limitations are specified here rather than presented as privileged-architecture support.
+This educational implementation does not reuse third-party CPU RTL. Instruction behavior follows the [RISC-V unprivileged RV32I specification](https://docs.riscv.org/reference/isa/unpriv/rv32.html). See [SPEC.md](SPEC.md) for the execution environment and trap behavior.
