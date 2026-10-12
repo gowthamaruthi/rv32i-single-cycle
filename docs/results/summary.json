@@ -1,0 +1,237 @@
+{
+  "cases": [
+    {
+      "name": "directed",
+      "retired": 124,
+      "trap_pc": 508,
+      "trap_cause": 3
+    },
+    {
+      "name": "random_0",
+      "retired": 1274,
+      "trap_pc": 6176,
+      "trap_cause": 3
+    },
+    {
+      "name": "random_1",
+      "retired": 1277,
+      "trap_pc": 6152,
+      "trap_cause": 3
+    },
+    {
+      "name": "random_2",
+      "retired": 1285,
+      "trap_pc": 6176,
+      "trap_cause": 3
+    },
+    {
+      "name": "random_3",
+      "retired": 1285,
+      "trap_pc": 6164,
+      "trap_cause": 3
+    },
+    {
+      "name": "random_4",
+      "retired": 1300,
+      "trap_pc": 6164,
+      "trap_cause": 3
+    },
+    {
+      "name": "random_5",
+      "retired": 1299,
+      "trap_pc": 6244,
+      "trap_cause": 3
+    },
+    {
+      "name": "random_6",
+      "retired": 1296,
+      "trap_pc": 6124,
+      "trap_cause": 3
+    },
+    {
+      "name": "random_7",
+      "retired": 1288,
+      "trap_pc": 6240,
+      "trap_cause": 3
+    },
+    {
+      "name": "random_8",
+      "retired": 1290,
+      "trap_pc": 6132,
+      "trap_cause": 3
+    },
+    {
+      "name": "random_9",
+      "retired": 1288,
+      "trap_pc": 6088,
+      "trap_cause": 3
+    },
+    {
+      "name": "ecall",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 11
+    },
+    {
+      "name": "illegal",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 2
+    },
+    {
+      "name": "csr",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 2
+    },
+    {
+      "name": "fence_i",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 2
+    },
+    {
+      "name": "bad_shift",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 2
+    },
+    {
+      "name": "bad_reg",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 2
+    },
+    {
+      "name": "bad_jalr",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 2
+    },
+    {
+      "name": "bad_branch",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 2
+    },
+    {
+      "name": "bad_load",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 2
+    },
+    {
+      "name": "bad_store",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 2
+    },
+    {
+      "name": "jal_align",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 0
+    },
+    {
+      "name": "jalr_align",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 0
+    },
+    {
+      "name": "branch_align",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 0
+    },
+    {
+      "name": "untaken_unaligned",
+      "retired": 1,
+      "trap_pc": 4,
+      "trap_cause": 3
+    },
+    {
+      "name": "load_align_1",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 4
+    },
+    {
+      "name": "load_align_2",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 4
+    },
+    {
+      "name": "load_align_5",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 4
+    },
+    {
+      "name": "store_align_1",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 6
+    },
+    {
+      "name": "store_align_2",
+      "retired": 0,
+      "trap_pc": 0,
+      "trap_cause": 6
+    }
+  ],
+  "total_retired": 13007,
+  "observed_operations_and_branch_outcomes": [
+    "ADD",
+    "ADDI",
+    "AND",
+    "ANDI",
+    "AUIPC",
+    "BEQ",
+    "BEQ_not_taken",
+    "BEQ_taken",
+    "BGE",
+    "BGEU",
+    "BGEU_not_taken",
+    "BGEU_taken",
+    "BGE_not_taken",
+    "BGE_taken",
+    "BLT",
+    "BLTU",
+    "BLTU_not_taken",
+    "BLTU_taken",
+    "BLT_not_taken",
+    "BLT_taken",
+    "BNE",
+    "BNE_not_taken",
+    "BNE_taken",
+    "FENCE",
+    "JAL",
+    "JALR",
+    "LB",
+    "LBU",
+    "LH",
+    "LHU",
+    "LUI",
+    "LW",
+    "OR",
+    "ORI",
+    "SB",
+    "SH",
+    "SLL",
+    "SLLI",
+    "SLT",
+    "SLTI",
+    "SLTIU",
+    "SLTU",
+    "SRA",
+    "SRAI",
+    "SRL",
+    "SRLI",
+    "SUB",
+    "SW",
+    "XOR",
+    "XORI"
+  ]
+}
