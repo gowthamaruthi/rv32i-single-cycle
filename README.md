@@ -63,4 +63,4 @@ I have not run Synopsys Design Compiler, Cadence Innovus, OpenROAD or OpenSTA on
 
 ## Attribution
 
-This is a newly developed educational implementation with AI-assisted development and review; it does not reuse a third-party CPU RTL implementation. Instruction behavior follows the [RISC-V unprivileged RV32I specification](https://docs.riscv.org/reference/isa/unpriv/rv32.html). The execution-environment choices and limitations are specified here rather than presented as privileged-architecture support.
+This educational implementation does not reuse third-party CPU RTL. Instruction behavior follows the [RISC-V unprivileged RV32I specification](https://docs.riscv.org/reference/isa/unpriv/rv32.html). The execution-environment choices and limitations are specified here rather than presented as privileged-architecture support.
