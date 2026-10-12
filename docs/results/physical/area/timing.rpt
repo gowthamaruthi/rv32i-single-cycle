@@ -1,0 +1,1048 @@
+
+==========================================================================
+finish report_tns
+--------------------------------------------------------------------------
+tns max 0.00
+
+==========================================================================
+finish report_wns
+--------------------------------------------------------------------------
+wns max 0.00
+
+==========================================================================
+finish report_worst_slack
+--------------------------------------------------------------------------
+worst slack max 3.37
+
+==========================================================================
+finish report_clock_min_period
+--------------------------------------------------------------------------
+core_clk period_min = 6.63 fmax = 150.90
+
+==========================================================================
+finish report_clock_skew
+--------------------------------------------------------------------------
+Clock core_clk
+   0.60 source latency regs[7][8]$_SDFFCE_PN0P_/CK ^
+  -0.37 target latency regs[14][23]$_SDFFCE_PN0P_/CK ^
+   0.10 clock uncertainty
+   0.00 CRPR
+--------------
+   0.32 setup skew
+
+
+==========================================================================
+finish report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: trapped$_SDFF_PP0_
+            (rising edge-triggered flip-flop clocked by core_clk)
+Endpoint: retire_valid$_SDFF_PP0_
+          (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock core_clk (rise edge)
+                          0.00    0.00   clock source latency
+     1    2.62    0.00    0.00    0.00 ^ clk (in)
+                                         clk (net)
+                  0.00    0.00    0.00 ^ wire1104/A (BUF_X1)
+     1    2.49    0.01    0.02    0.02 ^ wire1104/Z (BUF_X1)
+                                         net1104 (net)
+                  0.01    0.00    0.02 ^ wire1103/A (BUF_X1)
+     1    3.89    0.01    0.03    0.05 ^ wire1103/Z (BUF_X1)
+                                         net1103 (net)
+                  0.01    0.00    0.05 ^ wire1102/A (BUF_X2)
+     1    3.88    0.01    0.02    0.07 ^ wire1102/Z (BUF_X2)
+                                         net1102 (net)
+                  0.01    0.00    0.07 ^ wire1101/A (BUF_X2)
+     1    4.41    0.01    0.02    0.09 ^ wire1101/Z (BUF_X2)
+                                         net1101 (net)
+                  0.01    0.00    0.09 ^ wire1100/A (BUF_X2)
+     1    3.33    0.01    0.02    0.11 ^ wire1100/Z (BUF_X2)
+                                         net1100 (net)
+                  0.01    0.00    0.11 ^ wire1099/A (BUF_X1)
+     1    5.79    0.02    0.03    0.15 ^ wire1099/Z (BUF_X1)
+                                         net1099 (net)
+                  0.02    0.00    0.15 ^ wire1098/A (BUF_X4)
+     1    6.05    0.01    0.02    0.17 ^ wire1098/Z (BUF_X4)
+                                         net1098 (net)
+                  0.01    0.00    0.17 ^ wire1097/A (BUF_X4)
+     1    3.98    0.01    0.02    0.19 ^ wire1097/Z (BUF_X4)
+                                         net1097 (net)
+                  0.01    0.00    0.19 ^ clkbuf_0_clk/A (CLKBUF_X3)
+     3    4.56    0.01    0.03    0.22 ^ clkbuf_0_clk/Z (CLKBUF_X3)
+                                         clknet_0_clk (net)
+                  0.01    0.00    0.22 ^ max_length1204/A (BUF_X1)
+     1    3.50    0.01    0.03    0.24 ^ max_length1204/Z (BUF_X1)
+                                         net1204 (net)
+                  0.01    0.00    0.24 ^ wire1203/A (BUF_X1)
+     1    3.14    0.01    0.03    0.27 ^ wire1203/Z (BUF_X1)
+                                         net1203 (net)
+                  0.01    0.00    0.27 ^ wire1202/A (BUF_X1)
+     3    6.69    0.02    0.03    0.30 ^ wire1202/Z (BUF_X1)
+                                         net1202 (net)
+                  0.02    0.00    0.30 ^ max_length1201/A (BUF_X1)
+     1    3.07    0.01    0.03    0.33 ^ max_length1201/Z (BUF_X1)
+                                         net1201 (net)
+                  0.01    0.00    0.33 ^ clkbuf_4_13_0_clk/A (CLKBUF_X3)
+     3   16.94    0.02    0.04    0.37 ^ clkbuf_4_13_0_clk/Z (CLKBUF_X3)
+                                         clknet_4_13_0_clk (net)
+                  0.02    0.00    0.37 ^ wire1117/A (BUF_X1)
+     3    7.59    0.02    0.04    0.41 ^ wire1117/Z (BUF_X1)
+                                         net1117 (net)
+                  0.02    0.00    0.41 ^ clkbuf_leaf_94_clk/A (CLKBUF_X3)
+     5   12.77    0.01    0.04    0.45 ^ clkbuf_leaf_94_clk/Z (CLKBUF_X3)
+                                         clknet_leaf_94_clk (net)
+                  0.01    0.00    0.46 ^ trapped$_SDFF_PP0_/CK (DFF_X1)
+     2    3.14    0.01    0.09    0.55 ^ trapped$_SDFF_PP0_/Q (DFF_X1)
+                                         net305 (net)
+                  0.01    0.00    0.55 ^ _24912_/A2 (NOR2_X1)
+     3   13.69    0.02    0.03    0.57 v _24912_/ZN (NOR2_X1)
+                                         _04853_ (net)
+                  0.02    0.00    0.58 v _27666_/A2 (NAND2_X1)
+     1    2.83    0.01    0.02    0.60 ^ _27666_/ZN (NAND2_X1)
+                                         _06609_ (net)
+                  0.01    0.00    0.60 ^ wire1933/A (BUF_X1)
+     1    2.85    0.01    0.03    0.62 ^ wire1933/Z (BUF_X1)
+                                         net1933 (net)
+                  0.01    0.00    0.62 ^ wire1932/A (BUF_X1)
+     1    3.97    0.01    0.03    0.65 ^ wire1932/Z (BUF_X1)
+                                         net1932 (net)
+                  0.01    0.00    0.65 ^ _27667_/A (INV_X1)
+     1    1.31    0.00    0.01    0.66 v _27667_/ZN (INV_X1)
+                                         _01682_ (net)
+                  0.00    0.00    0.66 v retire_valid$_SDFF_PP0_/D (DFF_X1)
+                                  0.66   data arrival time
+
+                          0.00    0.00   clock core_clk (rise edge)
+                          0.00    0.00   clock source latency
+     1    2.62    0.00    0.00    0.00 ^ clk (in)
+                                         clk (net)
+                  0.00    0.00    0.00 ^ wire1104/A (BUF_X1)
+     1    2.49    0.01    0.02    0.02 ^ wire1104/Z (BUF_X1)
+                                         net1104 (net)
+                  0.01    0.00    0.02 ^ wire1103/A (BUF_X1)
+     1    3.89    0.01    0.03    0.05 ^ wire1103/Z (BUF_X1)
+                                         net1103 (net)
+                  0.01    0.00    0.05 ^ wire1102/A (BUF_X2)
+     1    3.88    0.01    0.02    0.07 ^ wire1102/Z (BUF_X2)
+                                         net1102 (net)
+                  0.01    0.00    0.07 ^ wire1101/A (BUF_X2)
+     1    4.41    0.01    0.02    0.09 ^ wire1101/Z (BUF_X2)
+                                         net1101 (net)
+                  0.01    0.00    0.09 ^ wire1100/A (BUF_X2)
+     1    3.33    0.01    0.02    0.11 ^ wire1100/Z (BUF_X2)
+                                         net1100 (net)
+                  0.01    0.00    0.11 ^ wire1099/A (BUF_X1)
+     1    5.79    0.02    0.03    0.15 ^ wire1099/Z (BUF_X1)
+                                         net1099 (net)
+                  0.02    0.00    0.15 ^ wire1098/A (BUF_X4)
+     1    6.05    0.01    0.02    0.17 ^ wire1098/Z (BUF_X4)
+                                         net1098 (net)
+                  0.01    0.00    0.17 ^ wire1097/A (BUF_X4)
+     1    3.98    0.01    0.02    0.19 ^ wire1097/Z (BUF_X4)
+                                         net1097 (net)
+                  0.01    0.00    0.19 ^ clkbuf_0_clk/A (CLKBUF_X3)
+     3    4.56    0.01    0.03    0.22 ^ clkbuf_0_clk/Z (CLKBUF_X3)
+                                         clknet_0_clk (net)
+                  0.01    0.00    0.22 ^ max_length1204/A (BUF_X1)
+     1    3.50    0.01    0.03    0.24 ^ max_length1204/Z (BUF_X1)
+                                         net1204 (net)
+                  0.01    0.00    0.24 ^ wire1203/A (BUF_X1)
+     1    3.14    0.01    0.03    0.27 ^ wire1203/Z (BUF_X1)
+                                         net1203 (net)
+                  0.01    0.00    0.27 ^ wire1202/A (BUF_X1)
+     3    6.69    0.02    0.03    0.30 ^ wire1202/Z (BUF_X1)
+                                         net1202 (net)
+                  0.02    0.00    0.30 ^ max_length1201/A (BUF_X1)
+     1    3.07    0.01    0.03    0.33 ^ max_length1201/Z (BUF_X1)
+                                         net1201 (net)
+                  0.01    0.00    0.33 ^ clkbuf_4_13_0_clk/A (CLKBUF_X3)
+     3   16.94    0.02    0.04    0.37 ^ clkbuf_4_13_0_clk/Z (CLKBUF_X3)
+                                         clknet_4_13_0_clk (net)
+                  0.02    0.00    0.37 ^ wire1124/A (BUF_X1)
+     2    6.17    0.02    0.04    0.41 ^ wire1124/Z (BUF_X1)
+                                         net1124 (net)
+                  0.02    0.00    0.41 ^ max_length1123/A (BUF_X1)
+     1    4.02    0.01    0.03    0.44 ^ max_length1123/Z (BUF_X1)
+                                         net1123 (net)
+                  0.01    0.00    0.44 ^ wire1122/A (BUF_X1)
+     1    4.88    0.01    0.03    0.47 ^ wire1122/Z (BUF_X1)
+                                         net1122 (net)
+                  0.01    0.00    0.47 ^ wire1121/A (BUF_X2)
+     3    7.90    0.01    0.03    0.50 ^ wire1121/Z (BUF_X2)
+                                         net1121 (net)
+                  0.01    0.00    0.50 ^ wire1119/A (BUF_X1)
+     1    3.04    0.01    0.03    0.53 ^ wire1119/Z (BUF_X1)
+                                         net1119 (net)
+                  0.01    0.00    0.53 ^ clkbuf_leaf_105_clk/A (CLKBUF_X3)
+     8   10.09    0.01    0.04    0.56 ^ clkbuf_leaf_105_clk/Z (CLKBUF_X3)
+                                         clknet_leaf_105_clk (net)
+                  0.01    0.00    0.56 ^ retire_valid$_SDFF_PP0_/CK (DFF_X1)
+                          0.10    0.66   clock uncertainty
+                          0.00    0.66   clock reconvergence pessimism
+                          0.00    0.67   library hold time
+                                  0.67   data required time
+-----------------------------------------------------------------------------
+                                  0.67   data required time
+                                 -0.66   data arrival time
+-----------------------------------------------------------------------------
+                                 -0.01   slack (VIOLATED)
+
+
+
+==========================================================================
+finish report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: imem_rdata[22] (input port clocked by core_clk)
+Endpoint: dmem_wstrb[3] (output port clocked by core_clk)
+Path Group: core_clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock core_clk (rise edge)
+                          0.00    0.00   clock network delay (propagated)
+                          2.00    2.00 v input external delay
+     1    1.33    0.10    0.00    2.00 v imem_rdata[22] (in)
+                                         imem_rdata[22] (net)
+                  0.10    0.00    2.00 v hold5856/A (CLKBUF_X1)
+     1    0.85    0.01    0.05    2.05 v hold5856/Z (CLKBUF_X1)
+                                         net5856 (net)
+                  0.01    0.00    2.05 v hold5526/A (CLKBUF_X1)
+     1    0.96    0.01    0.03    2.08 v hold5526/Z (CLKBUF_X1)
+                                         net5526 (net)
+                  0.01    0.00    2.08 v hold5857/A (CLKBUF_X1)
+     1    1.42    0.01    0.03    2.11 v hold5857/Z (CLKBUF_X1)
+                                         net5857 (net)
+                  0.01    0.00    2.11 v hold1084/A (CLKBUF_X1)
+     1    0.94    0.01    0.03    2.13 v hold1084/Z (CLKBUF_X1)
+                                         net1084 (net)
+                  0.01    0.00    2.13 v hold5858/A (CLKBUF_X1)
+     1    0.81    0.01    0.02    2.16 v hold5858/Z (CLKBUF_X1)
+                                         net5858 (net)
+                  0.01    0.00    2.16 v hold5527/A (CLKBUF_X1)
+     1    1.05    0.01    0.03    2.18 v hold5527/Z (CLKBUF_X1)
+                                         net5527 (net)
+                  0.01    0.00    2.18 v hold5859/A (CLKBUF_X1)
+     1    1.16    0.01    0.03    2.21 v hold5859/Z (CLKBUF_X1)
+                                         net5859 (net)
+                  0.01    0.00    2.21 v input47/A (BUF_X1)
+     1    1.10    0.01    0.02    2.23 v input47/Z (BUF_X1)
+                                         net47 (net)
+                  0.01    0.00    2.23 v hold5860/A (CLKBUF_X1)
+     1    1.07    0.01    0.03    2.26 v hold5860/Z (CLKBUF_X1)
+                                         net5860 (net)
+                  0.01    0.00    2.26 v hold5528/A (CLKBUF_X1)
+     1    1.23    0.01    0.03    2.28 v hold5528/Z (CLKBUF_X1)
+                                         net5528 (net)
+                  0.01    0.00    2.28 v hold5861/A (CLKBUF_X1)
+     1    2.24    0.01    0.03    2.31 v hold5861/Z (CLKBUF_X1)
+                                         net5861 (net)
+                  0.01    0.00    2.31 v wire5306/A (BUF_X2)
+     1    2.06    0.00    0.02    2.34 v wire5306/Z (BUF_X2)
+                                         net5306 (net)
+                  0.00    0.00    2.34 v hold5529/A (CLKBUF_X1)
+     4   12.94    0.03    0.06    2.40 v hold5529/Z (CLKBUF_X1)
+                                         net5529 (net)
+                  0.03    0.00    2.40 v hold1085/A (CLKBUF_X1)
+     1    5.25    0.01    0.05    2.45 v hold1085/Z (CLKBUF_X1)
+                                         net1085 (net)
+                  0.01    0.00    2.45 v _14986_/A (INV_X2)
+     3    7.56    0.01    0.02    2.47 ^ _14986_/ZN (INV_X2)
+                                         _06970_ (net)
+                  0.01    0.00    2.47 ^ wire5141/A (BUF_X1)
+     2    5.47    0.01    0.03    2.50 ^ wire5141/Z (BUF_X1)
+                                         net5141 (net)
+                  0.01    0.00    2.50 ^ wire5140/A (CLKBUF_X2)
+     5   11.25    0.02    0.04    2.54 ^ wire5140/Z (CLKBUF_X2)
+                                         net5140 (net)
+                  0.02    0.00    2.54 ^ wire5138/A (CLKBUF_X2)
+     4    9.99    0.01    0.04    2.58 ^ wire5138/Z (CLKBUF_X2)
+                                         net5138 (net)
+                  0.01    0.00    2.58 ^ wire5137/A (CLKBUF_X2)
+     5   10.74    0.02    0.04    2.62 ^ wire5137/Z (CLKBUF_X2)
+                                         net5137 (net)
+                  0.02    0.00    2.62 ^ max_length5136/A (BUF_X2)
+     2    6.49    0.01    0.03    2.64 ^ max_length5136/Z (BUF_X2)
+                                         net5136 (net)
+                  0.01    0.00    2.65 ^ wire5135/A (BUF_X2)
+     2   11.12    0.02    0.03    2.68 ^ wire5135/Z (BUF_X2)
+                                         net5135 (net)
+                  0.02    0.00    2.68 ^ _14987_/A1 (NOR2_X4)
+     1    3.72    0.01    0.01    2.69 v _14987_/ZN (NOR2_X4)
+                                         _06971_ (net)
+                  0.01    0.00    2.69 v wire4700/A (BUF_X1)
+     1    3.90    0.01    0.03    2.72 v wire4700/Z (BUF_X1)
+                                         net4700 (net)
+                  0.01    0.00    2.72 v wire4699/A (BUF_X2)
+     6   11.37    0.01    0.03    2.75 v wire4699/Z (BUF_X2)
+                                         net4699 (net)
+                  0.01    0.00    2.75 v max_length4698/A (BUF_X1)
+     2    5.10    0.01    0.03    2.78 v max_length4698/Z (BUF_X1)
+                                         net4698 (net)
+                  0.01    0.00    2.78 v wire4695/A (CLKBUF_X2)
+     4    9.39    0.01    0.04    2.82 v wire4695/Z (CLKBUF_X2)
+                                         net4695 (net)
+                  0.01    0.00    2.82 v max_length4694/A (BUF_X1)
+     3    6.10    0.01    0.04    2.85 v max_length4694/Z (BUF_X1)
+                                         net4694 (net)
+                  0.01    0.00    2.85 v max_length4693/A (CLKBUF_X2)
+     3    9.09    0.01    0.04    2.89 v max_length4693/Z (CLKBUF_X2)
+                                         net4693 (net)
+                  0.01    0.00    2.89 v _14988_/A (INV_X1)
+     2    5.67    0.02    0.02    2.92 ^ _14988_/ZN (INV_X1)
+                                         _06972_ (net)
+                  0.02    0.00    2.92 ^ wire4366/A (BUF_X1)
+     3    8.40    0.02    0.04    2.96 ^ wire4366/Z (BUF_X1)
+                                         net4366 (net)
+                  0.02    0.00    2.96 ^ wire4364/A (BUF_X1)
+     2    5.31    0.01    0.03    2.99 ^ wire4364/Z (BUF_X1)
+                                         net4364 (net)
+                  0.01    0.00    2.99 ^ wire4363/A (BUF_X1)
+     2    4.45    0.01    0.03    3.02 ^ wire4363/Z (BUF_X1)
+                                         net4363 (net)
+                  0.01    0.00    3.02 ^ place843/A (BUF_X1)
+     3    7.56    0.02    0.04    3.06 ^ place843/Z (BUF_X1)
+                                         net843 (net)
+                  0.02    0.00    3.06 ^ max_length3967/A (BUF_X2)
+     4    8.87    0.01    0.03    3.09 ^ max_length3967/Z (BUF_X2)
+                                         net3967 (net)
+                  0.01    0.00    3.09 ^ max_length3966/A (BUF_X1)
+     2    5.42    0.01    0.03    3.13 ^ max_length3966/Z (BUF_X1)
+                                         net3966 (net)
+                  0.01    0.00    3.13 ^ wire3965/A (BUF_X1)
+     3    7.92    0.02    0.04    3.16 ^ wire3965/Z (BUF_X1)
+                                         net3965 (net)
+                  0.02    0.00    3.17 ^ max_length3964/A (BUF_X1)
+     2    5.38    0.01    0.03    3.20 ^ max_length3964/Z (BUF_X1)
+                                         net3964 (net)
+                  0.01    0.00    3.20 ^ wire3963/A (BUF_X1)
+     2    4.87    0.01    0.03    3.23 ^ wire3963/Z (BUF_X1)
+                                         net3963 (net)
+                  0.01    0.00    3.23 ^ _17200_/A (AOI21_X1)
+     1    3.24    0.01    0.02    3.25 v _17200_/ZN (AOI21_X1)
+                                         _09125_ (net)
+                  0.01    0.00    3.25 v _17201_/A2 (NOR2_X1)
+     1    2.64    0.02    0.03    3.28 ^ _17201_/ZN (NOR2_X1)
+                                         _09126_ (net)
+                  0.02    0.00    3.28 ^ wire3242/A (BUF_X1)
+     1    2.54    0.01    0.03    3.31 ^ wire3242/Z (BUF_X1)
+                                         net3242 (net)
+                  0.01    0.00    3.31 ^ wire3241/A (BUF_X1)
+     1    4.84    0.01    0.03    3.34 ^ wire3241/Z (BUF_X1)
+                                         net3241 (net)
+                  0.01    0.00    3.34 ^ _17219_/A1 (NAND2_X1)
+     1    4.01    0.01    0.02    3.36 v _17219_/ZN (NAND2_X1)
+                                         _09144_ (net)
+                  0.01    0.00    3.36 v wire3137/A (BUF_X1)
+     1    4.20    0.01    0.03    3.39 v wire3137/Z (BUF_X1)
+                                         net3137 (net)
+                  0.01    0.00    3.39 v _17261_/A1 (NAND3_X1)
+     4   11.62    0.03    0.04    3.43 ^ _17261_/ZN (NAND3_X1)
+                                         _00073_ (net)
+                  0.03    0.00    3.43 ^ _27713_/B (HA_X1)
+     3    5.71    0.04    0.07    3.50 ^ _27713_/S (HA_X1)
+                                         _00075_ (net)
+                  0.04    0.00    3.50 ^ _20562_/A2 (NAND2_X1)
+     3    7.30    0.02    0.03    3.54 v _20562_/ZN (NAND2_X1)
+                                         _12387_ (net)
+                  0.02    0.00    3.54 v _20584_/A2 (NOR2_X2)
+     2    4.22    0.02    0.04    3.57 ^ _20584_/ZN (NOR2_X2)
+                                         _12409_ (net)
+                  0.02    0.00    3.57 ^ _20607_/A1 (NAND4_X1)
+     2    6.33    0.03    0.04    3.62 v _20607_/ZN (NAND4_X1)
+                                         _12432_ (net)
+                  0.03    0.00    3.62 v _20688_/A1 (NOR4_X1)
+     1    3.55    0.06    0.08    3.69 ^ _20688_/ZN (NOR4_X1)
+                                         _12513_ (net)
+                  0.06    0.00    3.69 ^ _20689_/A1 (NAND2_X1)
+     3    5.88    0.02    0.03    3.73 v _20689_/ZN (NAND2_X1)
+                                         _12514_ (net)
+                  0.02    0.00    3.73 v _20690_/A1 (NAND2_X1)
+     1    1.96    0.01    0.02    3.75 ^ _20690_/ZN (NAND2_X1)
+                                         _12515_ (net)
+                  0.01    0.00    3.75 ^ _20693_/A (OAI21_X1)
+     1    2.05    0.01    0.02    3.77 v _20693_/ZN (OAI21_X1)
+                                         _12518_ (net)
+                  0.01    0.00    3.77 v _20694_/A (INV_X1)
+     1    1.79    0.01    0.01    3.78 ^ _20694_/ZN (INV_X1)
+                                         _12519_ (net)
+                  0.01    0.00    3.78 ^ _20695_/A2 (NAND2_X1)
+     1    3.52    0.01    0.02    3.80 v _20695_/ZN (NAND2_X1)
+                                         _12520_ (net)
+                  0.01    0.00    3.80 v _20696_/A2 (NOR2_X2)
+     1    3.52    0.02    0.03    3.83 ^ _20696_/ZN (NOR2_X2)
+                                         _12521_ (net)
+                  0.02    0.00    3.83 ^ _20700_/A1 (NAND2_X2)
+     1    3.51    0.01    0.01    3.84 v _20700_/ZN (NAND2_X2)
+                                         _12525_ (net)
+                  0.01    0.00    3.84 v wire2315/A (BUF_X1)
+     1    3.53    0.01    0.03    3.87 v wire2315/Z (BUF_X1)
+                                         net2315 (net)
+                  0.01    0.00    3.87 v wire2314/A (BUF_X2)
+     4   12.62    0.01    0.03    3.90 v wire2314/Z (BUF_X2)
+                                         net2314 (net)
+                  0.01    0.00    3.91 v _20708_/A (INV_X2)
+     2    7.96    0.01    0.02    3.92 ^ _20708_/ZN (INV_X2)
+                                         _12533_ (net)
+                  0.01    0.00    3.92 ^ _20709_/A1 (NAND2_X4)
+    10   19.96    0.01    0.02    3.94 v _20709_/ZN (NAND2_X4)
+                                         _12534_ (net)
+                  0.01    0.00    3.95 v _20714_/A1 (NAND2_X1)
+    12   25.20    0.06    0.07    4.02 ^ _20714_/ZN (NAND2_X1)
+                                         _12539_ (net)
+                  0.06    0.00    4.02 ^ _20715_/A (INV_X1)
+     2    9.04    0.02    0.03    4.05 v _20715_/ZN (INV_X1)
+                                         _12540_ (net)
+                  0.02    0.00    4.05 v _20716_/B2 (AOI21_X4)
+     4   12.90    0.03    0.04    4.09 ^ _20716_/ZN (AOI21_X4)
+                                         _12541_ (net)
+                  0.03    0.00    4.09 ^ _20717_/A1 (NAND2_X2)
+     3    6.84    0.01    0.02    4.11 v _20717_/ZN (NAND2_X2)
+                                         _12542_ (net)
+                  0.01    0.00    4.11 v max_length1946/A (CLKBUF_X3)
+     7   17.10    0.02    0.05    4.16 v max_length1946/Z (CLKBUF_X3)
+                                         net1946 (net)
+                  0.02    0.00    4.16 v _20718_/A (INV_X2)
+     2    6.52    0.01    0.02    4.18 ^ _20718_/ZN (INV_X2)
+                                         _12543_ (net)
+                  0.01    0.00    4.18 ^ max_length1931/A (BUF_X4)
+    16   31.13    0.02    0.04    4.22 ^ max_length1931/Z (BUF_X4)
+                                         net1931 (net)
+                  0.02    0.00    4.22 ^ _20721_/A1 (NAND2_X1)
+     8   14.75    0.03    0.04    4.26 v _20721_/ZN (NAND2_X1)
+                                         _12546_ (net)
+                  0.03    0.00    4.26 v wire1758/A (BUF_X2)
+     9   17.83    0.01    0.05    4.31 v wire1758/Z (BUF_X2)
+                                         net1758 (net)
+                  0.01    0.00    4.31 v _20722_/A (INV_X1)
+     2    5.44    0.01    0.02    4.33 ^ _20722_/ZN (INV_X1)
+                                         _12547_ (net)
+                  0.01    0.00    4.33 ^ wire1646/A (BUF_X1)
+     1    3.25    0.01    0.03    4.36 ^ wire1646/Z (BUF_X1)
+                                         net1646 (net)
+                  0.01    0.00    4.36 ^ wire1645/A (BUF_X1)
+     1    3.79    0.01    0.03    4.39 ^ wire1645/Z (BUF_X1)
+                                         net1645 (net)
+                  0.01    0.00    4.39 ^ _20723_/A1 (AND2_X1)
+     1    3.48    0.01    0.04    4.43 ^ _20723_/ZN (AND2_X1)
+                                         net98 (net)
+                  0.01    0.00    4.43 ^ wire1489/A (BUF_X1)
+     2    5.14    0.01    0.03    4.46 ^ wire1489/Z (BUF_X1)
+                                         net1489 (net)
+                  0.01    0.00    4.46 ^ _20724_/A1 (NAND2_X1)
+     4    6.04    0.01    0.02    4.48 v _20724_/ZN (NAND2_X1)
+                                         _12548_ (net)
+                  0.01    0.00    4.48 v _27683_/A1 (NOR2_X1)
+     1    1.20    0.01    0.02    4.51 ^ _27683_/ZN (NOR2_X1)
+                                         net134 (net)
+                  0.01    0.00    4.51 ^ output134/A (BUF_X1)
+     1    0.87    0.01    0.02    4.53 ^ output134/Z (BUF_X1)
+                                         dmem_wstrb[3] (net)
+                  0.01    0.00    4.53 ^ dmem_wstrb[3] (out)
+                                  4.53   data arrival time
+
+                         10.00   10.00   clock core_clk (rise edge)
+                          0.00   10.00   clock network delay (propagated)
+                         -0.10    9.90   clock uncertainty
+                          0.00    9.90   clock reconvergence pessimism
+                         -2.00    7.90   output external delay
+                                  7.90   data required time
+-----------------------------------------------------------------------------
+                                  7.90   data required time
+                                 -4.53   data arrival time
+-----------------------------------------------------------------------------
+                                  3.37   slack (MET)
+
+
+
+==========================================================================
+finish report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: imem_rdata[22] (input port clocked by core_clk)
+Endpoint: dmem_wstrb[3] (output port clocked by core_clk)
+Path Group: core_clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock core_clk (rise edge)
+                          0.00    0.00   clock network delay (propagated)
+                          2.00    2.00 v input external delay
+     1    1.33    0.10    0.00    2.00 v imem_rdata[22] (in)
+                                         imem_rdata[22] (net)
+                  0.10    0.00    2.00 v hold5856/A (CLKBUF_X1)
+     1    0.85    0.01    0.05    2.05 v hold5856/Z (CLKBUF_X1)
+                                         net5856 (net)
+                  0.01    0.00    2.05 v hold5526/A (CLKBUF_X1)
+     1    0.96    0.01    0.03    2.08 v hold5526/Z (CLKBUF_X1)
+                                         net5526 (net)
+                  0.01    0.00    2.08 v hold5857/A (CLKBUF_X1)
+     1    1.42    0.01    0.03    2.11 v hold5857/Z (CLKBUF_X1)
+                                         net5857 (net)
+                  0.01    0.00    2.11 v hold1084/A (CLKBUF_X1)
+     1    0.94    0.01    0.03    2.13 v hold1084/Z (CLKBUF_X1)
+                                         net1084 (net)
+                  0.01    0.00    2.13 v hold5858/A (CLKBUF_X1)
+     1    0.81    0.01    0.02    2.16 v hold5858/Z (CLKBUF_X1)
+                                         net5858 (net)
+                  0.01    0.00    2.16 v hold5527/A (CLKBUF_X1)
+     1    1.05    0.01    0.03    2.18 v hold5527/Z (CLKBUF_X1)
+                                         net5527 (net)
+                  0.01    0.00    2.18 v hold5859/A (CLKBUF_X1)
+     1    1.16    0.01    0.03    2.21 v hold5859/Z (CLKBUF_X1)
+                                         net5859 (net)
+                  0.01    0.00    2.21 v input47/A (BUF_X1)
+     1    1.10    0.01    0.02    2.23 v input47/Z (BUF_X1)
+                                         net47 (net)
+                  0.01    0.00    2.23 v hold5860/A (CLKBUF_X1)
+     1    1.07    0.01    0.03    2.26 v hold5860/Z (CLKBUF_X1)
+                                         net5860 (net)
+                  0.01    0.00    2.26 v hold5528/A (CLKBUF_X1)
+     1    1.23    0.01    0.03    2.28 v hold5528/Z (CLKBUF_X1)
+                                         net5528 (net)
+                  0.01    0.00    2.28 v hold5861/A (CLKBUF_X1)
+     1    2.24    0.01    0.03    2.31 v hold5861/Z (CLKBUF_X1)
+                                         net5861 (net)
+                  0.01    0.00    2.31 v wire5306/A (BUF_X2)
+     1    2.06    0.00    0.02    2.34 v wire5306/Z (BUF_X2)
+                                         net5306 (net)
+                  0.00    0.00    2.34 v hold5529/A (CLKBUF_X1)
+     4   12.94    0.03    0.06    2.40 v hold5529/Z (CLKBUF_X1)
+                                         net5529 (net)
+                  0.03    0.00    2.40 v hold1085/A (CLKBUF_X1)
+     1    5.25    0.01    0.05    2.45 v hold1085/Z (CLKBUF_X1)
+                                         net1085 (net)
+                  0.01    0.00    2.45 v _14986_/A (INV_X2)
+     3    7.56    0.01    0.02    2.47 ^ _14986_/ZN (INV_X2)
+                                         _06970_ (net)
+                  0.01    0.00    2.47 ^ wire5141/A (BUF_X1)
+     2    5.47    0.01    0.03    2.50 ^ wire5141/Z (BUF_X1)
+                                         net5141 (net)
+                  0.01    0.00    2.50 ^ wire5140/A (CLKBUF_X2)
+     5   11.25    0.02    0.04    2.54 ^ wire5140/Z (CLKBUF_X2)
+                                         net5140 (net)
+                  0.02    0.00    2.54 ^ wire5138/A (CLKBUF_X2)
+     4    9.99    0.01    0.04    2.58 ^ wire5138/Z (CLKBUF_X2)
+                                         net5138 (net)
+                  0.01    0.00    2.58 ^ wire5137/A (CLKBUF_X2)
+     5   10.74    0.02    0.04    2.62 ^ wire5137/Z (CLKBUF_X2)
+                                         net5137 (net)
+                  0.02    0.00    2.62 ^ max_length5136/A (BUF_X2)
+     2    6.49    0.01    0.03    2.64 ^ max_length5136/Z (BUF_X2)
+                                         net5136 (net)
+                  0.01    0.00    2.65 ^ wire5135/A (BUF_X2)
+     2   11.12    0.02    0.03    2.68 ^ wire5135/Z (BUF_X2)
+                                         net5135 (net)
+                  0.02    0.00    2.68 ^ _14987_/A1 (NOR2_X4)
+     1    3.72    0.01    0.01    2.69 v _14987_/ZN (NOR2_X4)
+                                         _06971_ (net)
+                  0.01    0.00    2.69 v wire4700/A (BUF_X1)
+     1    3.90    0.01    0.03    2.72 v wire4700/Z (BUF_X1)
+                                         net4700 (net)
+                  0.01    0.00    2.72 v wire4699/A (BUF_X2)
+     6   11.37    0.01    0.03    2.75 v wire4699/Z (BUF_X2)
+                                         net4699 (net)
+                  0.01    0.00    2.75 v max_length4698/A (BUF_X1)
+     2    5.10    0.01    0.03    2.78 v max_length4698/Z (BUF_X1)
+                                         net4698 (net)
+                  0.01    0.00    2.78 v wire4695/A (CLKBUF_X2)
+     4    9.39    0.01    0.04    2.82 v wire4695/Z (CLKBUF_X2)
+                                         net4695 (net)
+                  0.01    0.00    2.82 v max_length4694/A (BUF_X1)
+     3    6.10    0.01    0.04    2.85 v max_length4694/Z (BUF_X1)
+                                         net4694 (net)
+                  0.01    0.00    2.85 v max_length4693/A (CLKBUF_X2)
+     3    9.09    0.01    0.04    2.89 v max_length4693/Z (CLKBUF_X2)
+                                         net4693 (net)
+                  0.01    0.00    2.89 v _14988_/A (INV_X1)
+     2    5.67    0.02    0.02    2.92 ^ _14988_/ZN (INV_X1)
+                                         _06972_ (net)
+                  0.02    0.00    2.92 ^ wire4366/A (BUF_X1)
+     3    8.40    0.02    0.04    2.96 ^ wire4366/Z (BUF_X1)
+                                         net4366 (net)
+                  0.02    0.00    2.96 ^ wire4364/A (BUF_X1)
+     2    5.31    0.01    0.03    2.99 ^ wire4364/Z (BUF_X1)
+                                         net4364 (net)
+                  0.01    0.00    2.99 ^ wire4363/A (BUF_X1)
+     2    4.45    0.01    0.03    3.02 ^ wire4363/Z (BUF_X1)
+                                         net4363 (net)
+                  0.01    0.00    3.02 ^ place843/A (BUF_X1)
+     3    7.56    0.02    0.04    3.06 ^ place843/Z (BUF_X1)
+                                         net843 (net)
+                  0.02    0.00    3.06 ^ max_length3967/A (BUF_X2)
+     4    8.87    0.01    0.03    3.09 ^ max_length3967/Z (BUF_X2)
+                                         net3967 (net)
+                  0.01    0.00    3.09 ^ max_length3966/A (BUF_X1)
+     2    5.42    0.01    0.03    3.13 ^ max_length3966/Z (BUF_X1)
+                                         net3966 (net)
+                  0.01    0.00    3.13 ^ wire3965/A (BUF_X1)
+     3    7.92    0.02    0.04    3.16 ^ wire3965/Z (BUF_X1)
+                                         net3965 (net)
+                  0.02    0.00    3.17 ^ max_length3964/A (BUF_X1)
+     2    5.38    0.01    0.03    3.20 ^ max_length3964/Z (BUF_X1)
+                                         net3964 (net)
+                  0.01    0.00    3.20 ^ wire3963/A (BUF_X1)
+     2    4.87    0.01    0.03    3.23 ^ wire3963/Z (BUF_X1)
+                                         net3963 (net)
+                  0.01    0.00    3.23 ^ _17200_/A (AOI21_X1)
+     1    3.24    0.01    0.02    3.25 v _17200_/ZN (AOI21_X1)
+                                         _09125_ (net)
+                  0.01    0.00    3.25 v _17201_/A2 (NOR2_X1)
+     1    2.64    0.02    0.03    3.28 ^ _17201_/ZN (NOR2_X1)
+                                         _09126_ (net)
+                  0.02    0.00    3.28 ^ wire3242/A (BUF_X1)
+     1    2.54    0.01    0.03    3.31 ^ wire3242/Z (BUF_X1)
+                                         net3242 (net)
+                  0.01    0.00    3.31 ^ wire3241/A (BUF_X1)
+     1    4.84    0.01    0.03    3.34 ^ wire3241/Z (BUF_X1)
+                                         net3241 (net)
+                  0.01    0.00    3.34 ^ _17219_/A1 (NAND2_X1)
+     1    4.01    0.01    0.02    3.36 v _17219_/ZN (NAND2_X1)
+                                         _09144_ (net)
+                  0.01    0.00    3.36 v wire3137/A (BUF_X1)
+     1    4.20    0.01    0.03    3.39 v wire3137/Z (BUF_X1)
+                                         net3137 (net)
+                  0.01    0.00    3.39 v _17261_/A1 (NAND3_X1)
+     4   11.62    0.03    0.04    3.43 ^ _17261_/ZN (NAND3_X1)
+                                         _00073_ (net)
+                  0.03    0.00    3.43 ^ _27713_/B (HA_X1)
+     3    5.71    0.04    0.07    3.50 ^ _27713_/S (HA_X1)
+                                         _00075_ (net)
+                  0.04    0.00    3.50 ^ _20562_/A2 (NAND2_X1)
+     3    7.30    0.02    0.03    3.54 v _20562_/ZN (NAND2_X1)
+                                         _12387_ (net)
+                  0.02    0.00    3.54 v _20584_/A2 (NOR2_X2)
+     2    4.22    0.02    0.04    3.57 ^ _20584_/ZN (NOR2_X2)
+                                         _12409_ (net)
+                  0.02    0.00    3.57 ^ _20607_/A1 (NAND4_X1)
+     2    6.33    0.03    0.04    3.62 v _20607_/ZN (NAND4_X1)
+                                         _12432_ (net)
+                  0.03    0.00    3.62 v _20688_/A1 (NOR4_X1)
+     1    3.55    0.06    0.08    3.69 ^ _20688_/ZN (NOR4_X1)
+                                         _12513_ (net)
+                  0.06    0.00    3.69 ^ _20689_/A1 (NAND2_X1)
+     3    5.88    0.02    0.03    3.73 v _20689_/ZN (NAND2_X1)
+                                         _12514_ (net)
+                  0.02    0.00    3.73 v _20690_/A1 (NAND2_X1)
+     1    1.96    0.01    0.02    3.75 ^ _20690_/ZN (NAND2_X1)
+                                         _12515_ (net)
+                  0.01    0.00    3.75 ^ _20693_/A (OAI21_X1)
+     1    2.05    0.01    0.02    3.77 v _20693_/ZN (OAI21_X1)
+                                         _12518_ (net)
+                  0.01    0.00    3.77 v _20694_/A (INV_X1)
+     1    1.79    0.01    0.01    3.78 ^ _20694_/ZN (INV_X1)
+                                         _12519_ (net)
+                  0.01    0.00    3.78 ^ _20695_/A2 (NAND2_X1)
+     1    3.52    0.01    0.02    3.80 v _20695_/ZN (NAND2_X1)
+                                         _12520_ (net)
+                  0.01    0.00    3.80 v _20696_/A2 (NOR2_X2)
+     1    3.52    0.02    0.03    3.83 ^ _20696_/ZN (NOR2_X2)
+                                         _12521_ (net)
+                  0.02    0.00    3.83 ^ _20700_/A1 (NAND2_X2)
+     1    3.51    0.01    0.01    3.84 v _20700_/ZN (NAND2_X2)
+                                         _12525_ (net)
+                  0.01    0.00    3.84 v wire2315/A (BUF_X1)
+     1    3.53    0.01    0.03    3.87 v wire2315/Z (BUF_X1)
+                                         net2315 (net)
+                  0.01    0.00    3.87 v wire2314/A (BUF_X2)
+     4   12.62    0.01    0.03    3.90 v wire2314/Z (BUF_X2)
+                                         net2314 (net)
+                  0.01    0.00    3.91 v _20708_/A (INV_X2)
+     2    7.96    0.01    0.02    3.92 ^ _20708_/ZN (INV_X2)
+                                         _12533_ (net)
+                  0.01    0.00    3.92 ^ _20709_/A1 (NAND2_X4)
+    10   19.96    0.01    0.02    3.94 v _20709_/ZN (NAND2_X4)
+                                         _12534_ (net)
+                  0.01    0.00    3.95 v _20714_/A1 (NAND2_X1)
+    12   25.20    0.06    0.07    4.02 ^ _20714_/ZN (NAND2_X1)
+                                         _12539_ (net)
+                  0.06    0.00    4.02 ^ _20715_/A (INV_X1)
+     2    9.04    0.02    0.03    4.05 v _20715_/ZN (INV_X1)
+                                         _12540_ (net)
+                  0.02    0.00    4.05 v _20716_/B2 (AOI21_X4)
+     4   12.90    0.03    0.04    4.09 ^ _20716_/ZN (AOI21_X4)
+                                         _12541_ (net)
+                  0.03    0.00    4.09 ^ _20717_/A1 (NAND2_X2)
+     3    6.84    0.01    0.02    4.11 v _20717_/ZN (NAND2_X2)
+                                         _12542_ (net)
+                  0.01    0.00    4.11 v max_length1946/A (CLKBUF_X3)
+     7   17.10    0.02    0.05    4.16 v max_length1946/Z (CLKBUF_X3)
+                                         net1946 (net)
+                  0.02    0.00    4.16 v _20718_/A (INV_X2)
+     2    6.52    0.01    0.02    4.18 ^ _20718_/ZN (INV_X2)
+                                         _12543_ (net)
+                  0.01    0.00    4.18 ^ max_length1931/A (BUF_X4)
+    16   31.13    0.02    0.04    4.22 ^ max_length1931/Z (BUF_X4)
+                                         net1931 (net)
+                  0.02    0.00    4.22 ^ _20721_/A1 (NAND2_X1)
+     8   14.75    0.03    0.04    4.26 v _20721_/ZN (NAND2_X1)
+                                         _12546_ (net)
+                  0.03    0.00    4.26 v wire1758/A (BUF_X2)
+     9   17.83    0.01    0.05    4.31 v wire1758/Z (BUF_X2)
+                                         net1758 (net)
+                  0.01    0.00    4.31 v _20722_/A (INV_X1)
+     2    5.44    0.01    0.02    4.33 ^ _20722_/ZN (INV_X1)
+                                         _12547_ (net)
+                  0.01    0.00    4.33 ^ wire1646/A (BUF_X1)
+     1    3.25    0.01    0.03    4.36 ^ wire1646/Z (BUF_X1)
+                                         net1646 (net)
+                  0.01    0.00    4.36 ^ wire1645/A (BUF_X1)
+     1    3.79    0.01    0.03    4.39 ^ wire1645/Z (BUF_X1)
+                                         net1645 (net)
+                  0.01    0.00    4.39 ^ _20723_/A1 (AND2_X1)
+     1    3.48    0.01    0.04    4.43 ^ _20723_/ZN (AND2_X1)
+                                         net98 (net)
+                  0.01    0.00    4.43 ^ wire1489/A (BUF_X1)
+     2    5.14    0.01    0.03    4.46 ^ wire1489/Z (BUF_X1)
+                                         net1489 (net)
+                  0.01    0.00    4.46 ^ _20724_/A1 (NAND2_X1)
+     4    6.04    0.01    0.02    4.48 v _20724_/ZN (NAND2_X1)
+                                         _12548_ (net)
+                  0.01    0.00    4.48 v _27683_/A1 (NOR2_X1)
+     1    1.20    0.01    0.02    4.51 ^ _27683_/ZN (NOR2_X1)
+                                         net134 (net)
+                  0.01    0.00    4.51 ^ output134/A (BUF_X1)
+     1    0.87    0.01    0.02    4.53 ^ output134/Z (BUF_X1)
+                                         dmem_wstrb[3] (net)
+                  0.01    0.00    4.53 ^ dmem_wstrb[3] (out)
+                                  4.53   data arrival time
+
+                         10.00   10.00   clock core_clk (rise edge)
+                          0.00   10.00   clock network delay (propagated)
+                         -0.10    9.90   clock uncertainty
+                          0.00    9.90   clock reconvergence pessimism
+                         -2.00    7.90   output external delay
+                                  7.90   data required time
+-----------------------------------------------------------------------------
+                                  7.90   data required time
+                                 -4.53   data arrival time
+-----------------------------------------------------------------------------
+                                  3.37   slack (MET)
+
+
+
+==========================================================================
+finish report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+
+==========================================================================
+finish max_slew_check_slack
+--------------------------------------------------------------------------
+0.0964752808213234
+
+==========================================================================
+finish max_slew_check_limit
+--------------------------------------------------------------------------
+0.1985349953174591
+
+==========================================================================
+finish max_slew_check_slack_limit
+--------------------------------------------------------------------------
+0.4859
+
+==========================================================================
+finish max_fanout_check_slack
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+finish max_fanout_check_limit
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+finish max_capacitance_check_slack
+--------------------------------------------------------------------------
+4.286548614501953
+
+==========================================================================
+finish max_capacitance_check_limit
+--------------------------------------------------------------------------
+10.47130012512207
+
+==========================================================================
+finish max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+0.4094
+
+==========================================================================
+finish max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 0
+
+==========================================================================
+finish max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+finish max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 0
+
+==========================================================================
+finish setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 0
+
+==========================================================================
+finish hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 1
+
+==========================================================================
+finish report_checks -path_delay max reg to reg
+--------------------------------------------------------------------------
+Startpoint: regs[2][0]$_SDFFCE_PN0P_
+            (rising edge-triggered flip-flop clocked by core_clk)
+Endpoint: regs[20][12]$_SDFFCE_PN0P_
+          (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock source latency
+   0.00    0.00 ^ clk (in)
+   0.02    0.02 ^ wire1104/Z (BUF_X1)
+   0.03    0.05 ^ wire1103/Z (BUF_X1)
+   0.02    0.07 ^ wire1102/Z (BUF_X2)
+   0.02    0.09 ^ wire1101/Z (BUF_X2)
+   0.02    0.11 ^ wire1100/Z (BUF_X2)
+   0.03    0.15 ^ wire1099/Z (BUF_X1)
+   0.02    0.17 ^ wire1098/Z (BUF_X4)
+   0.02    0.19 ^ wire1097/Z (BUF_X4)
+   0.03    0.22 ^ clkbuf_0_clk/Z (CLKBUF_X3)
+   0.02    0.24 ^ max_length1198/Z (BUF_X1)
+   0.03    0.27 ^ wire1197/Z (BUF_X1)
+   0.03    0.30 ^ max_length1196/Z (BUF_X1)
+   0.03    0.33 ^ wire1195/Z (BUF_X1)
+   0.03    0.36 ^ wire1193/Z (BUF_X1)
+   0.03    0.39 ^ wire1192/Z (BUF_X1)
+   0.04    0.43 ^ clkbuf_4_0_0_clk/Z (CLKBUF_X3)
+   0.04    0.47 ^ wire1180/Z (BUF_X1)
+   0.03    0.50 ^ max_length1179/Z (BUF_X2)
+   0.04    0.53 ^ clkbuf_leaf_1_clk/Z (CLKBUF_X3)
+   0.00    0.53 ^ regs[2][0]$_SDFFCE_PN0P_/CK (DFF_X1)
+   0.10    0.63 ^ regs[2][0]$_SDFFCE_PN0P_/Q (DFF_X1)
+   0.01    0.64 v _17565_/ZN (INV_X1)
+   0.02    0.66 ^ _17566_/ZN (NAND2_X1)
+   0.02    0.67 v _17569_/ZN (NAND3_X1)
+   0.02    0.69 ^ _17574_/ZN (NAND2_X1)
+   0.01    0.70 v _17575_/ZN (NAND2_X1)
+   0.02    0.72 ^ _17587_/ZN (NAND2_X1)
+   0.01    0.73 v _17588_/ZN (INV_X1)
+   0.03    0.76 v wire3319/Z (BUF_X1)
+   0.03    0.79 v wire3318/Z (BUF_X1)
+   0.03    0.82 v wire3317/Z (BUF_X1)
+   0.02    0.84 ^ _17589_/ZN (NAND2_X1)
+   0.02    0.85 v _17590_/ZN (NAND2_X1)
+   0.03    0.88 v wire3133/Z (BUF_X1)
+   0.03    0.92 v wire3132/Z (BUF_X1)
+   0.03    0.94 v wire3131/Z (BUF_X2)
+   0.02    0.97 ^ _17636_/ZN (NAND2_X2)
+   0.04    1.00 ^ wire3056/Z (BUF_X2)
+   0.03    1.03 v _22587_/ZN (NAND2_X1)
+   0.02    1.05 ^ _22588_/ZN (NAND2_X4)
+   0.03    1.08 ^ wire2867/Z (BUF_X1)
+   0.04    1.11 ^ wire2866/Z (BUF_X2)
+   0.05    1.16 ^ max_length2865/Z (CLKBUF_X3)
+   0.02    1.18 v _22592_/ZN (INV_X4)
+   0.03    1.21 v max_length2776/Z (BUF_X2)
+   0.05    1.25 v max_length2775/Z (CLKBUF_X3)
+   0.05    1.30 v max_length2774/Z (CLKBUF_X3)
+   0.02    1.32 ^ _22805_/ZN (NAND2_X1)
+   0.03    1.35 ^ hold5543/Z (CLKBUF_X1)
+   0.02    1.37 v _22810_/ZN (NAND3_X1)
+   0.04    1.41 v hold5544/Z (CLKBUF_X1)
+   0.02    1.42 ^ _22820_/ZN (NAND3_X2)
+   0.05    1.47 ^ hold5545/Z (CLKBUF_X1)
+   0.02    1.49 v _22837_/ZN (NAND3_X4)
+   0.06    1.55 v hold5546/Z (CLKBUF_X1)
+   0.02    1.57 ^ _22842_/ZN (NAND2_X4)
+   0.02    1.59 v _22844_/ZN (NAND2_X2)
+   0.03    1.62 ^ _22845_/ZN (NAND3_X4)
+   0.08    1.71 ^ hold5971/Z (CLKBUF_X1)
+   0.02    1.72 v _24155_/ZN (NAND2_X1)
+   0.03    1.75 v hold6006/Z (CLKBUF_X1)
+   0.02    1.78 ^ _24156_/ZN (AOI21_X1)
+   0.04    1.81 ^ hold6007/Z (CLKBUF_X1)
+   0.02    1.83 v _24164_/ZN (NAND3_X2)
+   0.03    1.86 v hold6008/Z (CLKBUF_X1)
+   0.02    1.89 v wire2467/Z (BUF_X1)
+   0.04    1.92 v hold6009/Z (CLKBUF_X1)
+   0.03    1.96 v wire2465/Z (BUF_X1)
+   0.03    1.99 v wire2464/Z (BUF_X1)
+   0.03    2.02 v wire2463/Z (BUF_X1)
+   0.03    2.05 v wire2462/Z (BUF_X2)
+   0.04    2.09 v wire2461/Z (CLKBUF_X2)
+   0.03    2.12 v place798/Z (BUF_X2)
+   0.04    2.15 v wire2325/Z (CLKBUF_X2)
+   0.04    2.20 v wire2324/Z (CLKBUF_X2)
+   0.03    2.23 v wire2323/Z (BUF_X1)
+   0.03    2.26 v wire2322/Z (BUF_X2)
+   0.03    2.29 v max_length2321/Z (BUF_X2)
+   0.03    2.33 v wire2320/Z (BUF_X1)
+   0.03    2.36 v wire2319/Z (BUF_X2)
+   0.02    2.38 ^ _26540_/ZN (NAND2_X1)
+   0.02    2.40 v _26542_/ZN (OAI21_X1)
+   0.00    2.40 v regs[20][12]$_SDFFCE_PN0P_/D (DFF_X1)
+           2.40   data arrival time
+
+  10.00   10.00   clock core_clk (rise edge)
+   0.00   10.00   clock source latency
+   0.00   10.00 ^ clk (in)
+   0.02   10.02 ^ wire1104/Z (BUF_X1)
+   0.03   10.05 ^ wire1103/Z (BUF_X1)
+   0.02   10.07 ^ wire1102/Z (BUF_X2)
+   0.02   10.09 ^ wire1101/Z (BUF_X2)
+   0.02   10.11 ^ wire1100/Z (BUF_X2)
+   0.03   10.15 ^ wire1099/Z (BUF_X1)
+   0.02   10.17 ^ wire1098/Z (BUF_X4)
+   0.02   10.19 ^ wire1097/Z (BUF_X4)
+   0.03   10.22 ^ clkbuf_0_clk/Z (CLKBUF_X3)
+   0.02   10.24 ^ max_length1198/Z (BUF_X1)
+   0.03   10.27 ^ wire1197/Z (BUF_X1)
+   0.04   10.30 ^ wire1191/Z (BUF_X1)
+   0.04   10.35 ^ clkbuf_4_8_0_clk/Z (CLKBUF_X3)
+   0.04   10.39 ^ max_length1142/Z (BUF_X1)
+   0.04   10.43 ^ clkbuf_leaf_15_clk/Z (CLKBUF_X3)
+   0.00   10.43 ^ regs[20][12]$_SDFFCE_PN0P_/CK (DFF_X1)
+  -0.10   10.33   clock uncertainty
+   0.00   10.33   clock reconvergence pessimism
+  -0.04   10.29   library setup time
+          10.29   data required time
+---------------------------------------------------------
+          10.29   data required time
+          -2.40   data arrival time
+---------------------------------------------------------
+           7.89   slack (MET)
+
+
+
+==========================================================================
+finish report_checks -path_delay min reg to reg
+--------------------------------------------------------------------------
+Startpoint: trapped$_SDFF_PP0_
+            (rising edge-triggered flip-flop clocked by core_clk)
+Endpoint: retire_valid$_SDFF_PP0_
+          (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock source latency
+   0.00    0.00 ^ clk (in)
+   0.02    0.02 ^ wire1104/Z (BUF_X1)
+   0.03    0.05 ^ wire1103/Z (BUF_X1)
+   0.02    0.07 ^ wire1102/Z (BUF_X2)
+   0.02    0.09 ^ wire1101/Z (BUF_X2)
+   0.02    0.11 ^ wire1100/Z (BUF_X2)
+   0.03    0.15 ^ wire1099/Z (BUF_X1)
+   0.02    0.17 ^ wire1098/Z (BUF_X4)
+   0.02    0.19 ^ wire1097/Z (BUF_X4)
+   0.03    0.22 ^ clkbuf_0_clk/Z (CLKBUF_X3)
+   0.03    0.24 ^ max_length1204/Z (BUF_X1)
+   0.03    0.27 ^ wire1203/Z (BUF_X1)
+   0.03    0.30 ^ wire1202/Z (BUF_X1)
+   0.03    0.33 ^ max_length1201/Z (BUF_X1)
+   0.04    0.37 ^ clkbuf_4_13_0_clk/Z (CLKBUF_X3)
+   0.04    0.41 ^ wire1117/Z (BUF_X1)
+   0.04    0.45 ^ clkbuf_leaf_94_clk/Z (CLKBUF_X3)
+   0.00    0.46 ^ trapped$_SDFF_PP0_/CK (DFF_X1)
+   0.09    0.55 ^ trapped$_SDFF_PP0_/Q (DFF_X1)
+   0.03    0.57 v _24912_/ZN (NOR2_X1)
+   0.02    0.60 ^ _27666_/ZN (NAND2_X1)
+   0.03    0.62 ^ wire1933/Z (BUF_X1)
+   0.03    0.65 ^ wire1932/Z (BUF_X1)
+   0.01    0.66 v _27667_/ZN (INV_X1)
+   0.00    0.66 v retire_valid$_SDFF_PP0_/D (DFF_X1)
+           0.66   data arrival time
+
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock source latency
+   0.00    0.00 ^ clk (in)
+   0.02    0.02 ^ wire1104/Z (BUF_X1)
+   0.03    0.05 ^ wire1103/Z (BUF_X1)
+   0.02    0.07 ^ wire1102/Z (BUF_X2)
+   0.02    0.09 ^ wire1101/Z (BUF_X2)
+   0.02    0.11 ^ wire1100/Z (BUF_X2)
+   0.03    0.15 ^ wire1099/Z (BUF_X1)
+   0.02    0.17 ^ wire1098/Z (BUF_X4)
+   0.02    0.19 ^ wire1097/Z (BUF_X4)
+   0.03    0.22 ^ clkbuf_0_clk/Z (CLKBUF_X3)
+   0.03    0.24 ^ max_length1204/Z (BUF_X1)
+   0.03    0.27 ^ wire1203/Z (BUF_X1)
+   0.03    0.30 ^ wire1202/Z (BUF_X1)
+   0.03    0.33 ^ max_length1201/Z (BUF_X1)
+   0.04    0.37 ^ clkbuf_4_13_0_clk/Z (CLKBUF_X3)
+   0.04    0.41 ^ wire1124/Z (BUF_X1)
+   0.03    0.44 ^ max_length1123/Z (BUF_X1)
+   0.03    0.47 ^ wire1122/Z (BUF_X1)
+   0.03    0.50 ^ wire1121/Z (BUF_X2)
+   0.03    0.53 ^ wire1119/Z (BUF_X1)
+   0.04    0.56 ^ clkbuf_leaf_105_clk/Z (CLKBUF_X3)
+   0.00    0.56 ^ retire_valid$_SDFF_PP0_/CK (DFF_X1)
+   0.10    0.66   clock uncertainty
+   0.00    0.66   clock reconvergence pessimism
+   0.00    0.67   library hold time
+           0.67   data required time
+---------------------------------------------------------
+           0.67   data required time
+          -0.66   data arrival time
+---------------------------------------------------------
+          -0.01   slack (VIOLATED)
+
+
+
+==========================================================================
+finish critical path target clock latency max path
+--------------------------------------------------------------------------
+0.4257
+
+==========================================================================
+finish critical path target clock latency min path
+--------------------------------------------------------------------------
+0.5724
+
+==========================================================================
+finish critical path source clock latency min path
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+finish critical path delay
+--------------------------------------------------------------------------
+4.5270
+
+==========================================================================
+finish critical path slack
+--------------------------------------------------------------------------
+3.3730
+
+==========================================================================
+finish slack div critical path delay
+--------------------------------------------------------------------------
+74.508505
+
+==========================================================================
+finish report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             8.24e-04   2.02e-06   9.10e-05   9.17e-04  32.6%
+Combinational          3.51e-04   4.26e-04   4.35e-04   1.21e-03  43.1%
+Clock                  3.30e-04   3.37e-04   1.26e-05   6.80e-04  24.2%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  1.51e-03   7.66e-04   5.38e-04   2.81e-03 100.0%
+                          53.6%      27.3%      19.2%

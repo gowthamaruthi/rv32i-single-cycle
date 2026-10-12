@@ -7,10 +7,22 @@ bash physical/run.sh baseline
 bash physical/run.sh area
 ```
 
-Docker is required. This Mac does not currently have a container runtime; the initial execution uses GitHub's Ubuntu runner. Logs and generated layout files are uploaded as workflow artifacts. Execution results will be recorded after the runs complete.
+Docker is required. This Mac does not currently have a container runtime; the initial execution uses GitHub's Ubuntu runner. Logs and generated layout files are uploaded as workflow artifacts. [Selected implementation results](../docs/results/physical/), [initial results](../docs/results/physical-initial/) and [capacitance-repair results](../docs/results/physical-cap-repair/) are checked in. The initial flow reached GDS but left electrical violations; a 15% repair margin removed those violations. KLayout then identified antenna markers. The current configuration also repairs long clock-root and data wires before routing.
 
 The 10 ns clock, 0.1 ns uncertainty, 0.1/2 ns minimum/maximum I/O delays and 0.010 pF output loads are explicit study assumptions. Reset is synchronous and timed. External instruction/data memories are absent; this is not a closed timing model of a complete CPU-plus-memory system. It does not establish the maximum operating frequency of that system. Nangate45 is an educational platform, not a production tapeout target.
 
 Area is mapped standard-cell area. Power reports from vectorless activity are estimates, not measured silicon power. Timing must be evaluated for both setup and hold after routing. A generated GDS file alone is not physical signoff; record DRC/LVS and antenna results separately.
 
 Platform files remain in the pinned upstream container; this repository does not redistribute a proprietary PDK. References: [OpenROAD Flow Scripts](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts), [Nangate45 platform and license](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/tree/master/flow/platforms/nangate45).
+
+## Acceptance and limitations
+
+`check-results.py` writes a summary and returns nonzero for negative setup/hold slack, electrical violations or KLayout DRC markers. No physical-rule checks are disabled to obtain a passing result. LVS is separately reported as unsupported when the pinned platform lacks its configured LVS deck. A successful remaining check does not establish LVS or foundry signoff.
+
+The physical flow includes the retirement/debug outputs and excludes external memories. It uses one typical library corner. Default vectorless activity is not calibrated to an application workload. The area-oriented ABC option initially increased final area and estimated power; I retain both runs rather than claim an improvement that was not observed.
+
+## Selected implementation
+
+The supported configuration is `baseline`. After capacitance and long-wire repair it passes setup/hold, electrical and KLayout DRC checks. The `area` mapping experiment has larger cell area and estimated power and retains a 7.2 ps hold violation, so I rejected it. Its command and failed results remain available for reproduction; the acceptance checks still return nonzero. Push CI runs the selected baseline; manual dispatch can rerun either variant.
+
+A subsequent 50 ps hold-margin trial exceeded the tool's hold-buffer limit at CTS. I reverted that trial and retained the already passing baseline rather than change the clock/I/O constraints or waive violations. LVS remains unavailable in the bundled platform.

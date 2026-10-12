@@ -22,3 +22,7 @@ docker run --rm --platform linux/amd64 --entrypoint bash \
 The Icarus test runs three shutdown/restart cycles. It explicitly forces every switched-domain output to X during modeled power loss, checks isolation, and checks execution restarts with cleared state. Mutations remove retirement isolation and violate sequencing; both must fail. Core reset clocks continue during this digital test. This is a behavioral supply-loss model, not native UPF-driven simulation: Icarus does not interpret the UPF. The OpenROAD check separately reads and writes power intent; it does not validate the simulation model against the UPF or insert/sign off isolation cells.
 
 Power-switch mapping, supply nets, retention, level shifters, physical multi-domain implementation and power-aware gate-level verification are outside this experiment. No power savings are measured here. The Nangate45 mapping is used to provide a linked netlist for the UPF parser, not to claim a power-gated implementation.
+
+## Recorded run
+
+[GitHub run 38273760790](https://github.com/gowthamaruthi/rv32i-single-cycle/actions/runs/38273760790) passes the simulation, two negative tests, synthesis and OpenROAD UPF read/write check. [Logs and round-tripped intent](../docs/results/power/) are retained with source hashes. The first parser run failed because technology LEF had not been loaded; loading technology and cell LEFs before linking fixed the setup error.

@@ -1,0 +1,2 @@
+PASS three isolation/power-loss/restart cycles, all outputs clamped under X injection
+power/tb_power.sv:41: $finish called at 380000 (1ps)
