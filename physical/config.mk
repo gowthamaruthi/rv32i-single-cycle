@@ -15,5 +15,3 @@ export ABC_AREA = $(if $(filter area,$(FLOW_VARIANT)),1,0)
 # Guardband capacitance repair against routed parasitic growth.
 export CAP_MARGIN = 15
 export POST_CTS_TCL = /workspace/physical/short-wires.tcl
-# Leave 50 ps of hold-repair margin for detailed-route parasitic changes.
-export HOLD_SLACK_MARGIN = 0.05

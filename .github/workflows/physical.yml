@@ -3,6 +3,12 @@ on:
   push:
     paths: ['rtl/**', 'physical/**', '!physical/*.md', '.github/workflows/physical.yml']
   workflow_dispatch:
+    inputs:
+      variant:
+        description: 'Baseline is the accepted implementation; area is a rejected comparison experiment.'
+        type: choice
+        options: [baseline, area]
+        default: baseline
 permissions:
   contents: read
 jobs:
@@ -12,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        variant: [baseline, area]
+        variant: ["${{ inputs.variant || 'baseline' }}"]
     steps:
       - uses: actions/checkout@v4
       - name: Run pinned OpenROAD flow
